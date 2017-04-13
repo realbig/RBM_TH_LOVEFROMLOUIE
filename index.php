@@ -3,7 +3,7 @@
  * Displays archive of posts.
  *
  * @since   1.0.0
- * @package PatRobertson
+ * @package Love_From_Louie
  */
 
 // Don't load directly

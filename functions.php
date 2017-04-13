@@ -137,8 +137,14 @@ add_action( 'after_setup_theme', function () {
     // Add theme support
     require_once __DIR__ . '/core/theme-support.php';
 	
+	// Add theme functions
+    require_once __DIR__ . '/includes/theme-functions.php';
+	
 	// Add Button Shortcode
     require_once __DIR__ . '/includes/shortcodes/lfl-button.php';
+	
+	// Nav Walker for Foundation
+    require_once __DIR__ . '/includes/class-foundation-nav-walker.php';
 
     // Allow shortcodes in text widget
     add_filter( 'widget_text', 'do_shortcode' );
