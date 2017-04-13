@@ -1,0 +1,22 @@
+.button {
+
+    @each $name, $color in $foundation-palette {
+        
+        &.hollow.#{$name} {
+            
+            color: $color;
+            border-width: 0.25em;
+            
+            &:hover {
+                
+                background-color: $color;
+                border-color: $color;
+                @include light-or-dark-text( $color );
+                
+            }
+            
+        }
+    
+    }
+    
+}

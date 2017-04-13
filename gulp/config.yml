@@ -4,7 +4,15 @@ javascript:
     # filename to output
     filename: "script.js"
     vendor: 
-      - ""
+      - "bower_components/foundation-sites/js/foundation.core.js"
+      - "bower_components/foundation-sites/js/foundation.util.keyboard.js"
+      - "bower_components/foundation-sites/js/foundation.util.box.js"
+      - "bower_components/foundation-sites/js/foundation.util.nest.js"
+      - "bower_components/foundation-sites/js/foundation.util.mediaQuery.js"
+      - "bower_components/foundation-sites/js/foundation.util.triggers.js"
+      - "bower_components/foundation-sites/js/foundation.util.motion.js"
+      - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
+      - "bower_components/foundation-sites/js/foundation.offcanvas.js"
     notification: "Running JavaScript"
     # Paths to JavaScript libraries, which are combined into one file
     src:
@@ -36,7 +44,7 @@ sass:
     root: "./"
     filename: "style.css"
     vendor: 
-      - ""
+      - "bower_components/foundation-sites/scss"
     notification: "Running Sass"
     src: "build/sass/main.scss"
   admin:

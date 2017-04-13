@@ -144,3 +144,5 @@ add_action( 'after_setup_theme', function () {
     add_filter( 'widget_text', 'do_shortcode' );
 
 } );
+
+require_once __DIR__ . '/admin/admin.php';
