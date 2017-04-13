@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="small-12 columns text-center">
             <?php echo sprintf( _x( 'Site by %s', 'Site By Footer Text', 'love-from-louie' ), '<a href="//realbigmarketing.com/" target="_blank">Real Big Marketing</a>' ); ?>
             <br />
-            <?php echo sprintf( _x( 'Copyright &copy; %s Pat Robertson', 'Copyright Footer Text', 'love-from-louie' ), date( 'Y' ) ); ?>
+            <?php echo sprintf( _x( 'Copyright &copy; %s %s', 'Copyright Footer Text', 'love-from-louie' ), date( 'Y' ), get_bloginfo( 'name' ) ); ?>
         </div>
     </div>
 
