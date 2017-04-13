@@ -1,6 +1,6 @@
 // We use these as default colors throughout
-$primary-color: #d1671f;
-$secondary-color: #ffbc8e;
+//$primary-color: #d1671f;
+//$secondary-color: #ffbc8e;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -19,7 +19,7 @@ $foundation-palette: (
 $dark-color: #333;
 $light-color: #ddd;
 
-$body-background: #f4f1ef;
+//$body-background: #f4f1ef;
 
 // We use these to define default font stacks
 $font-family-sans-serif: "Open Sans", sans-serif;
@@ -32,7 +32,7 @@ $anchor-color: scale-color( $primary-color, $lightness: -15% );
 $anchor-color-hover: scale-color( $anchor-color, $lightness: -25% );
 
 // We use these to control header font styles
-$header-font-family: 'Satisfy', cursive;
+//$header-font-family: 
 $header-color: $primary-color;
 
 $topbar-background: $primary-color;
