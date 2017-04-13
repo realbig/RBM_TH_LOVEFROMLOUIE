@@ -136,6 +136,9 @@ add_action( 'after_setup_theme', function () {
 
     // Add theme support
     require_once __DIR__ . '/core/theme-support.php';
+	
+	// Add Button Shortcode
+    require_once __DIR__ . '/includes/shortcodes/lfl-button.php';
 
     // Allow shortcodes in text widget
     add_filter( 'widget_text', 'do_shortcode' );
