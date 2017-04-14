@@ -13,6 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Run if RBM CPTs is active
 if ( class_exists( 'RBM_CPTS' ) ) {
+	
+	require_once __DIR__ . '/post-types/lfl-story.php';
+	require_once __DIR__ . '/post-types/lfl-partner.php';
     
 }
 else {
