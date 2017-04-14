@@ -151,4 +151,21 @@ add_action( 'after_setup_theme', function () {
 
 } );
 
+/**
+ * Add Widgets
+ *
+ * @since 1.0.0
+ */
+add_action( 'widgets_init', function() {
+    
+	if ( class_exists( 'Give' ) ) {
+	
+		require_once __DIR__ . '/includes/widgets/class-recent-story-donation-widget.php';
+
+		register_widget( 'LFL_Recent_Story_Donation_Widget' );
+		
+	}
+    
+} );
+
 require_once __DIR__ . '/admin/admin.php';
