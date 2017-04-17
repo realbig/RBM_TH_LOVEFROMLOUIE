@@ -11,7 +11,10 @@
 	position: relative;
 	z-index: 42;
 	
-	border: 0.25px $primary-color solid;
+	//border: 0.25px $primary-color solid;
 	border-top: none;
+	
+	-webkit-box-shadow: 0 0 0.25em $primary-color;
+        box-shadow: 0 0 0.25em $primary-color;
 	
 }
