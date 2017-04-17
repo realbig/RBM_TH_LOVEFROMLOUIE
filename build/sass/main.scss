@@ -14,6 +14,7 @@
 
 @import "foundation";
 
+@import "mixins";
 @import "settings";
 
 @include foundation-global-styles;
@@ -34,8 +35,6 @@
 @include foundation-reveal;
 @include foundation-close-button;
 
-@import "mixins";
-
 @import "global/wp";
 @import "global/base";
 @import "global/buttons";
@@ -44,3 +43,5 @@
 @import "static/top-bar";
 @import "static/off-canvas";
 @import "static/footer";
+
+@import "templates/home";

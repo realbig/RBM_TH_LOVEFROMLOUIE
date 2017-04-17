@@ -15,11 +15,45 @@
         }
         
     }
+	
+	// Placing this in a separate file because it is so specific to this implementation
+	@import "top-bar-logo";
     
-    .top-bar-title {
+    .top-bar-band {
         
         overflow: hidden;
         font-family: $header-font-family;
+		
+		// Base Padding on Column Gutters for a consistent feel
+		$small-padding: map-get( $grid-column-gutter, 'small' );
+		$medium-padding: map-get( $grid-column-gutter, 'medium' );
+
+		padding: $small-padding / 2;
+
+		@media #{$medium-up} {
+			padding: $medium-padding / 2;   
+		}
+		
+		position: absolute;
+        right: 0%;
+        top: 50%;
+        transform: translate( 0%, -50% );
+        -webkit-transform: translate( 0%, -50% );
+        -o-transform: translate( 0%, -50% );
+        -ms-transform: translate( 0%, -50% );
+		
+		background-color: $primary-color;
+		width: 100.5%;
+		
+		@media #{$medium-up} {
+			
+			.top-bar-band-container {
+				position: relative;
+				width: 83%;
+				left: 18%;
+			}
+			
+		}
         
         a {
             
@@ -34,7 +68,7 @@
             
             @media #{$medium-up} {
                 
-                font-size: rem-calc( map-get-deep( $header-styles, 'medium', 'h2', 'font-size' ) );
+                font-size: rem-calc( map-get-deep( $header-styles, 'medium', 'h5', 'font-size' ) );
                 
             }
 
@@ -48,14 +82,6 @@
     }
 
     .nav-menu {
-        position: absolute;
-        right: 2%;
-        top: 50%;
-        transform: translate( -2%, -50% );
-        -webkit-transform: translate( -2%, -50% );
-        -o-transform: translate( -2%, -50% );
-        -ms-transform: translate( -2%, -50% );
-        z-index: 2;
         
         .fa {
             margin-top: -0.5em; 

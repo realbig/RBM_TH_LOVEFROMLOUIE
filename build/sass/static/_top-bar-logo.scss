@@ -1,0 +1,17 @@
+.top-bar-logo.hide-for-small-only {
+	
+	background-color: #fff;
+	margin-top: -.5rem;
+    margin-left: 4rem;
+	padding: .5rem;
+	
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+	
+	position: relative;
+	z-index: 42;
+	
+	border: 0.25px $primary-color solid;
+	border-top: none;
+	
+}

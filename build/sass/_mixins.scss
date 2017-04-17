@@ -1,88 +1,109 @@
 @mixin light-or-dark-text( $color ) {
 
-    @if lightness( $color ) < 50% {
+	@if lightness( $color ) < 50% {
 
-        color: $light-color;
+		color: $light-color;
 
-    }
-    @else {
+	}
+	@else {
 
-        color: $dark-color;
+		color: $dark-color;
 
-    }
+	}
 
 }
 
 // Allow hex color to be passed into a Data URI
 @function uri-friendly-color( $color ) {
-    @return '%23' + str-slice( '#{$color}', 2, -1 );
+	@return '%23' + str-slice( '#{$color}', 2, -1 );
 }
 
 // Convert Hex to RGBA
 @mixin background-opacity( $color, $opacity: 0.3 ) {
-    background: $color; /* The fallback for ancient things */
-    background: rgba( $color, $opacity );
+	background: $color; /* The fallback for ancient things */
+	background: rgba( $color, $opacity );
 }
 
 // map-get down multiple levels without making nested map-gets manually
 @function map-get-deep( $map, $keys... ) {
-    
-    @each $key in $keys {
-        $map: map-get( $map, $key );
-    }
-    
-    @return $map;
-    
+
+	@each $key in $keys {
+		$map: map-get( $map, $key );
+	}
+
+	@return $map;
+
 }
 
 @mixin create-gradient( $direction, $start, $stop ) {
-    
-    // No Switch Statement in SCSS? Blah
-    @if $direction == 'vertical' {
-        $direction: 0;
-    }
-    @else if $direction == 'diagonal-up' {
-        $direction: 45;
-    }
-    @else if $direction == 'diagonal-down' {
-        $direction: -45;
-    }
-    @else {
-        $direction: 90;
-    }
-    
-    /* Fallback for ancient things */
-    background: #{$start};
-    
-    /* FF3.6-15 */
-    background: -moz-linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100% );
-    
-    /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100% );
-    
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    @if $direction == -45 {
-        background: linear-gradient( 180 + $direction + deg, #{$start} 0%, #{$stop} 100%);
-    }
-    @else if $direction == 45 {
-        background: linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100%);
-    }
-    @else {
-        background: linear-gradient( 180 - $direction + deg, #{$start} 0%, #{$stop} 100%);
-    }
-    
-    /* IE6-9 */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$stop}',GradientType=1 );
-    
+
+	// No Switch Statement in SCSS? Blah
+	@if $direction == 'vertical' {
+		$direction: 0;
+	}
+	@else if $direction == 'diagonal-up' {
+		$direction: 45;
+	}
+	@else if $direction == 'diagonal-down' {
+		$direction: -45;
+	}
+	@else {
+		$direction: 90;
+	}
+
+	/* Fallback for ancient things */
+	background: #{$start};
+
+	/* FF3.6-15 */
+	background: -moz-linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100% );
+
+	/* Chrome10-25,Safari5.1-6 */
+	background: -webkit-linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100% );
+
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	@if $direction == -45 {
+		background: linear-gradient( 180 + $direction + deg, #{$start} 0%, #{$stop} 100%);
+	}
+	@else if $direction == 45 {
+		background: linear-gradient( $direction + deg, #{$start} 0%, #{$stop} 100%);
+	}
+	@else {
+		background: linear-gradient( 180 - $direction + deg, #{$start} 0%, #{$stop} 100%);
+	}
+
+	/* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$stop}',GradientType=1 );
+
 }
 
 // Cross-browser, scaling Text-Stroke
 @mixin text-stroke( $color ) {
-    
-    text-shadow:
-        -0.02em -0.02em 0 $color,  
-        0.02em -0.02em 0 $color,
-        -0.02em 0.02em 0 $color,
-        0.02em 0.02em 0 $color;
-    
+
+	text-shadow:
+		-0.02em -0.02em 0 $color,  
+		0.02em -0.02em 0 $color,
+		-0.02em 0.02em 0 $color,
+		0.02em 0.02em 0 $color;
+
+}
+
+// I guess these got removed from Foundation? Super useful stuff.
+@function lower-bound( $range ) {
+
+	@if ( length( $range ) <= 0 ) {
+		@return 0;
+	}
+
+	@return nth( $range, 1 );
+
+}
+
+@function upper-bound( $range ) {
+
+	@if ( length( $range ) < 2 ) {
+		@return 999999999999;
+	}
+
+	@return nth( $range, 2 );
+
 }
