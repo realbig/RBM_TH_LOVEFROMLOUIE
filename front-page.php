@@ -18,7 +18,9 @@ get_header();
 
 the_post();
 
-locate_template( 'partials/home/graph.php', true );
+include locate_template( 'partials/home/hero.php' );
+
+include locate_template( 'partials/home/graph.php' );
 
 get_footer();
 ?>

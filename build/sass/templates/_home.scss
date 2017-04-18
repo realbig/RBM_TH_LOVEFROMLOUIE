@@ -7,12 +7,21 @@
 	
 	#site-content {
 		
-		.row:first-of-type {
+		.row {
 			
 			position: relative;
-			top: -35vh;
+		
+			&:first-of-type {
+			
+				position: absolute;
+				top: -25vh;
+				padding-top: 27vh;
+
+			}
 			
 		}
+		
+		@import "../partials/lfl-hero";
 		
 	}
 	

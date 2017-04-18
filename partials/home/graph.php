@@ -13,7 +13,7 @@ $graph_data = get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_data', true );
 
 ?>
 
-<div class="lfl-graph row expanded">
+<div class="lfl-graph row expanded" style="margin-top: <?php echo $hero_image[2] / 1.5; ?>px">
 	
 	<div class="small-12 medium-6 columns text-container">
 

@@ -148,6 +148,9 @@ add_action( 'after_setup_theme', function () {
 
     // Allow shortcodes in text widget
     add_filter( 'widget_text', 'do_shortcode' );
+	
+	// Create Hero Image Size
+	add_image_size( 'lfl-hero', false, 600 );
 
 } );
 

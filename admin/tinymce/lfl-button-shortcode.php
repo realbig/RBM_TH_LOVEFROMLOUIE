@@ -59,8 +59,8 @@ function lfl_tinymce_l10n( $l10n ) {
             'label' => _x( 'Color', 'Button Color Selection Label', 'love-from-louie' ),
             'default' => 'primary',
             'choices' => array(
-                'primary' => _x( 'Dark Orange', 'Primary Theme Color', 'love-from-louie' ),
-                'secondary' => _x( 'Light Orange', 'Secondary Theme Color', 'love-from-louie' ),
+                'primary' => _x( 'Green', 'Primary Theme Color', 'love-from-louie' ),
+                'secondary' => _x( 'Light Green', 'Secondary Theme Color', 'love-from-louie' ),
             ),
         ),
         'size' => array(

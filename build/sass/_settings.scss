@@ -16,6 +16,9 @@ $foundation-palette: (
     alert: $alert-color,
 );
 
+// Why, Foundation 6.3. Why.
+$button-palette: $foundation-palette;
+
 $dark-color: #333;
 $light-color: #ddd;
 

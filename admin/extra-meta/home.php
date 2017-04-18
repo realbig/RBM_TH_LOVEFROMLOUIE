@@ -64,14 +64,76 @@ function lfl_add_home_metaboxes() {
     if ( is_admin() && isset( $_REQUEST['post'] ) && $_REQUEST['post'] == get_option( 'page_on_front' ) ) {
 		
 		add_meta_box(
+            'pat-home-hero',
+            _x( 'Hero Section', 'Home Hero Metabox Title', 'love-from-louie' ),
+            'lfl_home_hero_metabox_content',
+            'page',
+            'normal'
+        );
+		
+		add_meta_box(
             'pat-home-graph',
-            _x( 'Graph Section', 'Home Graph Metabox Title', 'love_from_louie' ),
+            _x( 'Graph Section', 'Home Graph Metabox Title', 'love-from-louie' ),
             'lfl_home_graph_metabox_content',
             'page',
             'normal'
         );
         
     }
+    
+}
+
+/**
+ * Put fields in the Hero Metabox
+ * 
+ * @since       1.0.0
+ * @return      void
+ */
+function lfl_home_hero_metabox_content() {
+	
+	rbm_do_field_text(
+		'lfl_home_hero_title',
+		_x( 'Hero Section Title', 'Home Hero Section Title Label', 'love-from-louie' ),
+		false,
+		array(
+			'input_atts' => array(
+			),
+		)
+	);
+	
+	rbm_do_field_text(
+		'lfl_home_hero_button_text',
+		_x( 'Hero Section Button Text', 'Home Hero Section Button Text Label', 'love-from-louie' ),
+		false,
+		array(
+			'input_atts' => array(
+			),
+		)
+	);
+	
+	rbm_do_field_text(
+		'lfl_home_hero_button_url',
+		_x( 'Hero Section Button URL', 'Home Hero Section Button URL Label', 'love-from-louie' ),
+		false,
+		array(
+			'input_atts' => array(
+				'placeholder' => 'http://'
+			),
+		)
+	);
+	
+	rbm_do_field_media(
+		'lfl_home_hero_image',
+		_x( 'Hero Section Image', 'Home Hero Section Image Label', 'love-from-louie' ),
+		false,
+		array(
+			'button_text' => _x( 'Upload/Choose Hero Image', 'Home Hero Section Image Button Text', 'love-from-louie' ),
+			'button_remove_text' => _x( 'Remove Hero Image', 'Home Hero Section Image Remove Button Text', 'love-from-louie' ),
+			'type' => 'image',
+			'window_title' => _x( 'Choose Hero Image', 'Home Hero Section Image Window Title', 'love-from-louie' ),
+			'window_button_text' => _x( 'Use Hero Image', 'Home Hero Section Image Window Button Text', 'love-from-louie' ),
+		)
+	);
     
 }
 
@@ -85,7 +147,7 @@ function lfl_home_graph_metabox_content() {
 	
 	rbm_do_field_text(
 		'lfl_home_graph_title',
-		_x( 'Graph Section Title', 'Home Graph Section Title Label', 'love_from_louie' ),
+		_x( 'Graph Section Title', 'Home Graph Section Title Label', 'love-from-louie' ),
 		false,
 		array(
 			'input_atts' => array(
@@ -95,7 +157,7 @@ function lfl_home_graph_metabox_content() {
 	
 	rbm_do_field_wysiwyg(
 		'lfl_home_graph_text',
-		_x( 'Graph Section Content', 'Home Graph Section Content Label', 'love_from_louie' ),
+		_x( 'Graph Section Content', 'Home Graph Section Content Label', 'love-from-louie' ),
 		false,
 		array(
 			'input_atts' => array(
@@ -105,18 +167,18 @@ function lfl_home_graph_metabox_content() {
     
     rbm_do_field_repeater(
         'lfl_home_graph_data',
-        _x( 'Pie Chart Settings', 'Home Graph Title', 'love_from_louie' ),
+        _x( 'Pie Chart Settings', 'Home Graph Title', 'love-from-louie' ),
         array(
 			'label' => array(
 				'type' => 'text',
-				'label' => _x( 'Label', 'Home Graph Label Text', 'love_from_louie' ),
+				'label' => _x( 'Label', 'Home Graph Label Text', 'love-from-louie' ),
 				'args' => array(
 					'input_atts' => array(),
 				),
 			),
 			'percentage' => array(
 				'type' => 'number',
-				'label' => _x( 'Percentage', 'Home Graph Percentage Label', 'love_from_louie' ),
+				'label' => _x( 'Percentage', 'Home Graph Percentage Label', 'love-from-louie' ),
 				'args' => array(
 					'min' => '1',
 					'max' => '100',
@@ -125,7 +187,7 @@ function lfl_home_graph_metabox_content() {
 			),
 			'color' => array(
 				'type' => 'colorpicker',
-				'label' => _x( 'Color of this section of the Chart', 'Home Graph Color Label', 'love_from_louie' ),
+				'label' => _x( 'Color of this section of the Chart', 'Home Graph Color Label', 'love-from-louie' ),
 				'args' => array(
 					'default' => '#58DE78', // Secondary Color
 				),
