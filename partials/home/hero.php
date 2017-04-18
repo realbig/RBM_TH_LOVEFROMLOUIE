@@ -25,7 +25,7 @@ endif;
 
 <div class="lfl-hero row expanded" style="background-image: url(<?php echo $hero_image[0]; ?>); height: <?php echo $hero_image[2]; ?>px;">
 
-    <div class="small-12 medium-8 columns blank-container">
+    <div class="small-12 medium-8 columns blank-container hide-for-small-only">
 		
 		&nbsp;
 		

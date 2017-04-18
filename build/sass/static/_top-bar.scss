@@ -5,6 +5,8 @@
 	
 	@media #{$small-only} {
 		background-color: $primary-color;
+		width: 100%;
+		z-index: 42;
 	}
     
     // Phablet Landscape and Portrait iPad Fix
@@ -74,7 +76,7 @@
             
             @media #{$medium-up} {
                 
-                font-size: rem-calc( map-get-deep( $header-styles, 'medium', 'h5', 'font-size' ) );
+                font-size: rem-calc( map-get-deep( $header-styles, 'small', 'h6', 'font-size' ) );
                 
             }
 

@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     'container' => false,
                     'menu' => __( 'Primary Menu', 'love-from-louie' ),
                     'menu_class' => 'menu',
-                    'theme_location' => 'primary',
+                    'theme_location' => 'primary-menu',
                     'items_wrap' => '<ul id="%1$s" class="vertical %2$s">%3$s</ul>',
                     'fallback_cb' => false,
                     'walker' => new Foundation_Nav_Walker(),
@@ -75,17 +75,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</button>
 								</div>
 
-								<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-									<?php bloginfo( 'name' ); ?>
-								</a>
-
 								<div class="top-bar-right hide-for-small-only nav-menu">
 									<?php
 									wp_nav_menu( array(
 										'container' => false,
 										'menu' => __( 'Primary Menu', 'love-from-louie' ),
 										'menu_class' => 'dropdown menu',
-										'theme_location' => 'primary',
+										'theme_location' => 'primary-menu',
 										'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
 										'fallback_cb' => false,
 										'walker' => new Foundation_Nav_Walker(),

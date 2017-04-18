@@ -7,4 +7,19 @@
 	margin-left: -1.875em;
     width: 100.5%;
 	
+	@media #{$small-only} {
+		
+		width: 105%;
+		max-height: 75vh;
+		
+	}
+	
+}
+
+.lfl-hero + .lfl-graph {
+	
+	@media #{$small-only} {
+		margin-top: 300px !important;
+	}
+	
 }

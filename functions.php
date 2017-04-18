@@ -107,7 +107,7 @@ add_action( 'wp_enqueue_scripts', function () {
  * @since 1.0.0
  */
 add_action( 'after_setup_theme', function () {
-	register_nav_menu( 'primary', 'Primary Menu' );
+	register_nav_menu( 'primary-menu', 'Primary Menu' );
 } );
 
 /**
