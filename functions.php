@@ -107,7 +107,9 @@ add_action( 'wp_enqueue_scripts', function () {
  * @since 1.0.0
  */
 add_action( 'after_setup_theme', function () {
-	register_nav_menu( 'primary-menu', 'Primary Menu' );
+	
+	register_nav_menu( 'primary-menu', __( 'Primary Menu', 'love-from-louie' ) );
+	
 } );
 
 /**
@@ -119,9 +121,27 @@ add_action( 'widgets_init', function () {
     
     // Main Sidebar
     register_sidebar( array(
-    	'name' => 'Main Sidebar',
+    	'name' => __( 'Main Sidebar', 'love-from-louie' ),
     	'id' => 'sidebar-main',
-    	'description' => 'Displays on Interior Pages.',
+    	'description' => __( 'Displays on Interior Pages.', 'love-from-louie' ),
+    ) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Left', 'love-from-louie' ),
+    	'id' => 'footer-left',
+    	'description' => __( 'Footer Left.', 'love-from-louie' ),
+    ) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Center', 'love-from-louie' ),
+    	'id' => 'footer-center',
+    	'description' => __( 'Footer Center.', 'love-from-louie' ),
+    ) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Right', 'love-from-louie' ),
+    	'id' => 'footer-right',
+    	'description' => __( 'Footer Right.', 'love-from-louie' ),
     ) );
     
 } );
