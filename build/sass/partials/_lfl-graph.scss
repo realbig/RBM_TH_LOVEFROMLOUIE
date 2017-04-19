@@ -1,0 +1,12 @@
+.lfl-graph {
+    
+    // Base Padding on Column Gutters for a consistent feel
+    $small-padding: map-get( $grid-column-gutter, 'small' );
+    $medium-padding: map-get( $grid-column-gutter, 'medium' );
+    
+    padding: $small-padding;
+    
+    @media #{$medium-up} {
+        padding: $medium-padding;
+    }
+}

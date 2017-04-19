@@ -1,0 +1,51 @@
+.lfl-blog {
+    
+    // Base Padding on Column Gutters for a consistent feel
+    $small-padding: map-get( $grid-column-gutter, 'small' );
+    $medium-padding: map-get( $grid-column-gutter, 'medium' );
+    
+    padding: $small-padding;
+	text-align: center;
+    
+    @media #{$medium-up} {
+        padding: $medium-padding;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+		
+		&, a {
+        	color: $body-font-color;
+		}
+		
+		a {
+			
+			text-decoration: underline !important;
+			
+			&:hover {
+				text-decoration: none !important;
+			}
+			
+		}
+		
+    }
+    
+    .type-post {
+		margin-bottom: 1em;
+	}
+    
+    img {
+        display: block;
+		margin: 0 auto;
+    }
+	
+	p {
+		text-align: left;
+		margin-bottom: 0;
+	}
+    
+    .button {
+        margin-top: 1em;
+		text-align: left;
+    }
+    
+}

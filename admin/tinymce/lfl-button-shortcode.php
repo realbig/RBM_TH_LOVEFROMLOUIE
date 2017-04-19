@@ -61,6 +61,7 @@ function lfl_tinymce_l10n( $l10n ) {
             'choices' => array(
                 'primary' => _x( 'Green', 'Primary Theme Color', 'love-from-louie' ),
                 'secondary' => _x( 'Light Green', 'Secondary Theme Color', 'love-from-louie' ),
+				'tertiary' => _x( 'Blue-Green', 'Tertiary Theme Color', 'love-from-louie' ),
             ),
         ),
         'size' => array(

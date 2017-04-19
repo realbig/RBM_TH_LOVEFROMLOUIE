@@ -1,6 +1,7 @@
 // We use these as default colors throughout
 $primary-color: #3A924F;
 $secondary-color: #58DE78;
+$tertiary-color: #379f8b;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -10,6 +11,7 @@ $info-color: #a0d3e8;
 $foundation-palette: (
     primary: $primary-color,
     secondary: $secondary-color,
+	tertiary: $tertiary-color,
     info: $info-color,
     success: $success-color,
     warning: $warning-color,

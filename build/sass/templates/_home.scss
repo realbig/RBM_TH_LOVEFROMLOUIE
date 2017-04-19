@@ -22,21 +22,31 @@
 	
 	#site-content {
 		
-		.row {
+		padding: 0;
+		
+		& > .row {
 			
 			position: relative;
 		
 			&:first-of-type {
 			
 				position: absolute;
-				top: -25vh;
+				top: -80vh;
 				padding-top: 27vh;
 
+			}
+			
+			&:nth-of-type( 2n + 1 ) {
+				
+				background-color: lighten( desaturate( $secondary-color, 20 ), 20 );
+				
 			}
 			
 		}
 		
 		@import "../partials/lfl-hero";
+		@import "../partials/lfl-graph";
+		@import "../partials/lfl-blog";
 		
 	}
 	

@@ -78,6 +78,14 @@ function lfl_add_home_metaboxes() {
             'page',
             'normal'
         );
+		
+		add_meta_box(
+            'pat-home-blog',
+            _x( 'Blog Section', 'Home Blog Metabox Title', 'love-from-louie' ),
+            'lfl_home_blog_metabox_content',
+            'page',
+            'normal'
+        );
         
     }
     
@@ -195,5 +203,34 @@ function lfl_home_graph_metabox_content() {
 		),
         false
     );
+    
+}
+
+/**
+ * Put fields in the Blog Metabox
+ * 
+ * @since       1.0.0
+ * @return      void
+ */
+function lfl_home_blog_metabox_content() {
+	
+	rbm_do_field_text(
+		'lfl_home_blog_title',
+		_x( 'Blog Section Title', 'Home Blog Section Title Label', 'love-from-louie' ),
+		false,
+		array(
+			'input_atts' => array(
+			),
+		)
+	);
+	
+	rbm_do_field_number(
+		'lfl_home_blog_posts_per_page',
+		_x( 'Number of Blog Posts to Show', 'Home Blog Section Posts Per Page', 'love-from-louie' ),
+		false,
+		array(
+			'min' => '1',
+		)
+	);
     
 }
