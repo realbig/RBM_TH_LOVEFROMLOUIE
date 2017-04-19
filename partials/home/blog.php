@@ -23,6 +23,8 @@ $query = new WP_Query( array(
 	'posts_per_page' => $posts_per_page,
 ) );
 
+if ( count( $query->posts ) < $posts_per_page ) $posts_per_page = count( $query->posts );
+
 switch ( $posts_per_page ) {
 	
 	case ( $posts_per_page % 5 == 0 ) :
