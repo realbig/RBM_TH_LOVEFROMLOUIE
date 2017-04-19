@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Load any post-type specific hooks, if they exist
-locate_template( '/includes/hooks/' . get_post_type() . '-hooks.php', true, true );
+locate_template( '/includes/hooks/front_page-hooks.php', true, true );
 
 get_header();
 
