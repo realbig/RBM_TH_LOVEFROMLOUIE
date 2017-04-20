@@ -191,4 +191,25 @@ add_action( 'widgets_init', function() {
     
 } );
 
+/**
+ * Force WP Search to work across Post Types
+ * 
+ * @since 0.1.0
+ */
+add_filter( 'pre_get_posts', function( $query ) {
+    
+	if ( $query->is_search ) {
+        
+		$query->set( 'post_type', array(
+			'post',
+			'page',
+			'lfl-story',
+		) );
+        
+	}
+    
+	return $query;
+    
+} );
+
 require_once __DIR__ . '/admin/admin.php';
