@@ -21,3 +21,9 @@
     }
     
 }
+
+.give-btn {
+	
+	@include button( false, $primary-color, scale-color( $primary-color, $lightness: -15% ), 'auto', 'solid' );
+	
+}
