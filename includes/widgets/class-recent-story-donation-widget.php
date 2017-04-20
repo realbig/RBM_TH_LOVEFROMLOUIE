@@ -49,22 +49,33 @@ class LFL_Recent_Story_Donation_Widget extends WP_Widget {
 
         if ( ! empty( $instance['give_form'] ) ) : 
 		
-			global $post;
-
-			$story = new WP_Query( array(
-				'post_type' => 'lfl-story',
-				'posts_per_page' => 1,
-				'orderby' => 'date',
-				'order' => 'DESC',
-			) );
-		
-			while ( $story->have_posts() ) : $story->the_post(); ?>
+			if ( is_single() &&
+				get_post_type() == 'lfl-story' ) : ?>
 
 				<h2 class="widgettitle">
 					<?php printf( _x( 'Help %s,', 'Help this Animal header', 'love_from_louie' ), get_the_title() ); ?>
 				</h2>
 
-			<?php endwhile; wp_reset_postdata(); ?>
+			<?php else : 
+		
+				global $post;
+
+				$story = new WP_Query( array(
+					'post_type' => 'lfl-story',
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+					'order' => 'DESC',
+				) );
+
+				while ( $story->have_posts() ) : $story->the_post(); ?>
+
+					<h2 class="widgettitle">
+						<?php printf( _x( 'Help %s,', 'Help this Animal header', 'love_from_louie' ), get_the_title() ); ?>
+					</h2>
+
+				<?php endwhile; wp_reset_postdata();
+
+			endif; ?>
 
             <p>
 				<?php echo do_shortcode( '[give_form id="' . $instance['give_form'] . '" show_content="false" show_title="false"]' ); ?>

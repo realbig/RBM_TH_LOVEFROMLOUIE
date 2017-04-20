@@ -21,7 +21,11 @@ the_post();
 
 <div class="row expanded">
 
-    <article id="page-<?php the_ID(); ?>" <?php post_class( array( 'columns', 'small-12' ) ); ?>>
+    <article id="page-<?php the_ID(); ?>" <?php post_class( array( 
+        'columns',
+        'small-12',
+        is_active_sidebar( 'sidebar-main' ) ? 'medium-9': 'no-sidebar',
+    ) ); ?>>
         
         <?php if ( has_post_thumbnail() ) : ?>
             <div class="thumbnail alignleft">
@@ -40,6 +44,16 @@ the_post();
         <?php the_content(); ?>
 
     </article>
+	
+	<?php if ( is_active_sidebar( 'sidebar-main' ) ) : ?>
+    
+        <div class="small-12 medium-3 columns">
+            
+            <?php dynamic_sidebar( 'sidebar-main' ); ?>
+            
+        </div>
+    
+    <?php endif; ?>
 
     <?php if ( comments_open() ) : ?>
 
