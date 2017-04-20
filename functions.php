@@ -212,4 +212,28 @@ add_filter( 'pre_get_posts', function( $query ) {
     
 } );
 
+/**
+ * Filter the_archive_title() to be less... robotic
+ * 
+ * @param       string Archive Title
+ *
+ * @since       1.0.0
+ * @return      string Archive Title
+ */
+add_filter( 'get_the_archive_title', function( $title ) {
+	
+	if ( get_post_type() == 'lfl-story' ) {
+		
+		return _x( 'Our Stories', 'Stories Archive Title', 'love-from-louie' );
+		
+	}
+	else {
+    
+		// Not really necessary
+		return trim( str_replace( 'Archives:', '', $title ) );
+		
+	}
+    
+} );
+
 require_once __DIR__ . '/admin/admin.php';
