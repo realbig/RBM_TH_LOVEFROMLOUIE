@@ -1,4 +1,16 @@
 <?php
+/**
+ * Nav Walker for Foundation
+ *
+ * @since   1.0.0
+ * @package Love_From_Louie
+ * @subpackage  Love_From_Louie/includes
+ */
+
+// Don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
 
 if ( ! class_exists( 'Foundation_Nav_Walker' ) ) {
 
