@@ -2,6 +2,16 @@ footer {
 	
 	background-color: $primary-color;
     color: $secondary-color;
+	
+	// Base Padding on Column Gutters for a consistent feel
+    $small-padding: map-get( $grid-column-gutter, 'small' );
+    $medium-padding: map-get( $grid-column-gutter, 'medium' );
+    
+    padding-top: $small-padding;
+    
+    @media #{$medium-up} {
+        padding-top: $medium-padding;
+    }
 
     a {
 
