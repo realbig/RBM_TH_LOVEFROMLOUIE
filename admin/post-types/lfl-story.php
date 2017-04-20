@@ -24,7 +24,7 @@ class RBM_CPT_LFL_Story extends RBM_CPT {
         'menu_position' => 20,
         'has_archive' => true,
         'rewrite' => array(
-            'slug' => 'stories',
+            'slug' => 'our-stories',
             'with_front' => false,
             'feeds' => false,
             'pages' => true
