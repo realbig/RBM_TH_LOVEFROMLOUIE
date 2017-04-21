@@ -64,7 +64,7 @@ switch ( $posts_per_page ) {
 	
 			if ( $index == 1 ) : ?>
 	
-				<div class="row expanded">
+				<div class="row">
 					
 			<?php elseif ( $row_break == 2 ) :
 					

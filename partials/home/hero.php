@@ -14,27 +14,31 @@ $hero_image = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_rbm_lf
 ?>
 
 <div class="lfl-hero row expanded" style="background-image: url(<?php echo $hero_image[0]; ?>); height: <?php echo $hero_image[2]; ?>px;">
-
-    <div class="small-12 medium-8 columns blank-container hide-for-small-only">
-		
-		&nbsp;
-		
-    </div>
 	
-	<div class="small-12 medium-4 columns text-container">
+	<div class="row">
 
-        <h1><?php echo get_post_meta( get_the_ID(), '_rbm_lfl_home_hero_title', true ); ?></h1>
-		
-		<?php if ( $give_form = get_post_meta( get_the_ID(), '_rbm_lfl_home_hero_give_form', true ) ) : ?>
+		<div class="small-12 medium-8 columns blank-container hide-for-small-only">
 
-        	<?php echo do_shortcode( '[give_form id="' . $give_form . '" show_title="false" show_goal="false" show_content="none" display_style="modal"]' ); ?>
-		
-		<?php else : ?>
-		
-			<?php echo _x( 'Please select a Donation Form on the Edit Screen for this page', 'No Donation Form set', 'love-from-louie' ); ?>
-		
-		<?php endif; ?>
+			&nbsp;
 
-    </div>
+		</div>
 
+		<div class="small-12 medium-4 columns text-container">
+
+			<h1><?php echo get_post_meta( get_the_ID(), '_rbm_lfl_home_hero_title', true ); ?></h1>
+
+			<?php if ( $give_form = get_post_meta( get_the_ID(), '_rbm_lfl_home_hero_give_form', true ) ) : ?>
+
+				<?php echo do_shortcode( '[give_form id="' . $give_form . '" show_title="false" show_goal="false" show_content="none" display_style="modal"]' ); ?>
+
+			<?php else : ?>
+
+				<?php echo _x( 'Please select a Donation Form on the Edit Screen for this page', 'No Donation Form set', 'love-from-louie' ); ?>
+
+			<?php endif; ?>
+
+		</div>
+
+		
+	</div>
 </div>

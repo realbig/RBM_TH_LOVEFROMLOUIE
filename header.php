@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     
                     <?php if ( ! is_front_page() ) : ?>
                     
-                        <div class="row expanded">
+                        <div class="row">
                             <div class="small-12 columns">
                                 <?php lfl_custom_breadcrumbs(); ?>
                             </div>

@@ -15,18 +15,22 @@ $graph_data = get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_data', true );
 
 <div class="lfl-graph row expanded" style="margin-top: <?php echo $hero_image[2] / 1.5; ?>px">
 	
-	<div class="small-12 medium-6 columns text-container">
+	<div class="row">
+	
+		<div class="small-12 medium-6 columns text-container">
 
-        <h1><?php echo get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_title', true ); ?></h1>
+			<h1><?php echo get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_title', true ); ?></h1>
 
-        <?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_text', true ) ); ?>
+			<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), '_rbm_lfl_home_graph_text', true ) ); ?>
 
-    </div>
+		</div>
 
-    <div class="small-12 medium-6 columns chart-container">
+		<div class="small-12 medium-6 columns chart-container">
+
+			<canvas data-chart_data='<?php echo json_encode( $graph_data ); ?>'></canvas>
+
+		</div>
 		
-		<canvas data-chart_data='<?php echo json_encode( $graph_data ); ?>'></canvas>
-		
-    </div>
+	</div>
 
 </div>

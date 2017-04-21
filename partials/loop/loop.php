@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || die();
 
 if ( have_posts() ) : ?>
 
-    <div class="row expanded">
+    <div class="row">
         
         <div class="small-12 <?php echo ( is_active_sidebar( 'sidebar-main' ) ) ? 'medium-9': 'no-sidebar'; ?> columns">
 
