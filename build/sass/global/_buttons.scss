@@ -4,14 +4,7 @@
 		
 		&.#{$name} {
 
-			@include light-or-dark-text( $color );
-
-			&:hover, &:focus {
-
-				$hover-background: scale-color( $color, $lightness: $button-background-hover-lightness );
-				@include light-or-dark-text( $hover-background );
-
-			}
+			@include foundation-button-fix( $color );
 			
 		}
 
@@ -35,17 +28,10 @@
 
 }
 
-.give-btn, .give-btn[type="submit"] {
+.give-btn {
 
 	@include button( false, $primary-color, scale-color( $primary-color, $lightness: $button-background-hover-lightness ), 'auto', 'solid' );
 	
-	@include light-or-dark-text( $primary-color );
-
-	&:hover, &:focus {
-
-		$hover-background: scale-color( $primary-color, $lightness: $button-background-hover-lightness );
-		@include light-or-dark-text( $hover-background );
-
-	}
+	@include foundation-button-fix( $primary-color );
 
 }

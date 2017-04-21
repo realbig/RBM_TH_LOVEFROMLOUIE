@@ -13,6 +13,20 @@
 
 }
 
+// Foundation's Light/Dark check makes the buttons hard to read sometimes
+@mixin foundation-button-fix( $button-color ) {
+	
+	@include light-or-dark-text( $button-color );
+
+	&:hover, &:focus {
+
+		$hover-background: scale-color( $button-color, $lightness: $button-background-hover-lightness );
+		@include light-or-dark-text( $hover-background );
+
+	}
+	
+}
+
 // Allow hex color to be passed into a Data URI
 @function uri-friendly-color( $color ) {
 	@return '%23' + str-slice( '#{$color}', 2, -1 );
