@@ -109,24 +109,23 @@ function lfl_home_hero_metabox_content() {
 		)
 	);
 	
-	rbm_do_field_text(
-		'lfl_home_hero_button_text',
-		_x( 'Hero Section Button Text', 'Home Hero Section Button Text Label', 'love-from-louie' ),
-		false,
-		array(
-			'input_atts' => array(
-			),
-		)
-	);
+	// All Forms
+	$give_forms = new WP_Query( array(
+		'post_type' => 'give_forms',
+		'posts_per_page' => -1,
+		'orderby' => 'post_title',
+		'order' => 'ASC',
+	) );
+
+	$give_forms = wp_list_pluck( $give_forms->posts, 'post_title', 'ID' );
 	
-	rbm_do_field_text(
-		'lfl_home_hero_button_url',
-		_x( 'Hero Section Button URL', 'Home Hero Section Button URL Label', 'love-from-louie' ),
+	rbm_do_field_select(
+		'lfl_home_hero_give_form',
+		_x( 'Hero Section Donation Form', 'Home Hero Section Give Form Label', 'love-from-louie' ),
 		false,
 		array(
-			'input_atts' => array(
-				'placeholder' => 'http://'
-			),
+			'option_none' => _x( '-- Select a Donation Form --', 'Home Hero Section Give Form None Label', 'love-from-louie' ),
+			'options' => $give_forms,
 		)
 	);
 	

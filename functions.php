@@ -236,4 +236,18 @@ add_filter( 'get_the_archive_title', function( $title ) {
     
 } );
 
+/**
+ * "Donation Total" sounds like Total Number of Donations. It isn't what this String actually means though.
+ * 
+ * @param		string $label Donation Total Label
+ *                                      
+ * @since		1.0.0
+ * @return		string Donation Total Label
+ */
+add_filter( 'give_donation_total_label', function( $label ) {
+	
+	return _x( 'Donation Amount', 'Give Donation Total Replacement', 'love-from-louie' );
+	
+} );
+
 require_once __DIR__ . '/admin/admin.php';

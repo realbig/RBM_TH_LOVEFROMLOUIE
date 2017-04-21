@@ -4,13 +4,47 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	
-	//margin-left: -1.875em;
+	color: $secondary-color;
     width: 100.5%;
 	
 	@media #{$small-only} {
 		
 		width: 105%;
 		max-height: 75vh;
+		
+	}
+	
+	h1, h2, h3, h4, h5, h6, label {
+		color: $secondary-color;
+	}
+	
+	label {
+		font-weight: 600;
+	}
+	
+	label[for^="give-donation-level-select"] {
+		display: block;
+	}
+	
+	.give-select {
+		width: 50%;
+	}
+	
+	.give-btn {
+		
+		background: transparent;
+		color: $secondary-color;
+		border-color: $secondary-color;
+		border-width: 0.25em;
+		font-weight: 600;
+
+		&:hover {
+
+			background-color: $secondary-color;
+			border-color: $secondary-color;
+			@include light-or-dark-text( $secondary-color );
+
+		}
 		
 	}
 	
