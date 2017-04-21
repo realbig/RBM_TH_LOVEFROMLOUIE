@@ -37,6 +37,8 @@ define( 'THEME_DIR', get_template_directory() );
  */
 $theme_fonts = array(
 	'open-sans' => '//fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,800',
+	'droid-sans' => '//fonts.googleapis.com/css?family=Droid+Sans:regular,bold',
+	'lobster' => '//fonts.googleapis.com/css?family=Lobster',
 	'font-awesome' => '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css',
 );
 

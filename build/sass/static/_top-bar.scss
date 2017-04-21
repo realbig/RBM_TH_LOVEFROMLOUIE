@@ -28,7 +28,6 @@
     .top-bar-band {
         
         overflow: hidden;
-        font-family: $header-font-family;
 		
 		// Base Padding on Column Gutters for a consistent feel
 		$small-padding: map-get( $grid-column-gutter, 'small' );
