@@ -252,6 +252,12 @@ add_filter( 'give_donation_total_label', function( $label ) {
 	
 } );
 
+/**
+ * Add Localized "label" for the Donation Amount field at the top of Give Forms
+ * 
+ * @since		1.0.0
+ * @return		void
+ */
 add_action( 'wp_head', function() { 
 	
 	?>
@@ -267,5 +273,35 @@ add_action( 'wp_head', function() {
 	<?php
 	
 } );
+
+/**
+ * Add a dynamic "My Account" Link which has different text for logged and and out users
+ * 
+ * @param		string $items HTML Representation of Nav Menu Items
+ * @param		object $args  WP Nav Menu Object
+ *                                   
+ * @since		1.0.0
+ * @return		string HTML Representation of Nav Menu Items
+ */
+add_filter( 'wp_nav_menu_items', function( $items, $args ) {
+	
+	if ( $args->theme_location == 'primary-menu' ) {
+		
+		$my_account_page_id = get_option( 'woocommerce_myaccount_page_id' );
+		
+		if ( is_user_logged_in() ) {
+			$my_account_link_text = _x( 'My Account', 'My Account Link - Logged in Users', 'love-from-louie' );
+		}
+		else {
+			$my_account_link_text = _x( 'Login', 'My Account Link - Logged Out Users', 'love-from-louie' );
+		}
+		
+		$items .= '<li class="main-menu-item  menu-item-even menu-item-depth-0 menu-item"><a id="my-account-link" href="' . get_permalink( $my_account_page_id ) . '">' . $my_account_link_text . '</a></li>';
+		
+	}
+	
+	return $items;
+	
+}, 10, 2 );
 
 require_once __DIR__ . '/admin/admin.php';
