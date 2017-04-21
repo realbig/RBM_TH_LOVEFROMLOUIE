@@ -131,7 +131,16 @@ img[class*=" wp-image-"] { // Catch-all to grab images added via "Add Media" but
 // Catch-all for WP Search Fields and stuff
 input[type="submit"] {
 
-    @include button( false, $primary-color, scale-color( $primary-color, $lightness: -15% ), 'auto', 'solid' );
+    @include button( false, $primary-color, scale-color( $primary-color, $lightness: $button-background-hover-lightness ), 'auto', 'solid' );
+	
+	@include light-or-dark-text( $primary-color );
+
+	&:hover, &:focus {
+
+		$hover-background: scale-color( $primary-color, $lightness: $button-background-hover-lightness );
+		@include light-or-dark-text( $hover-background );
+
+	}
 
 }
 

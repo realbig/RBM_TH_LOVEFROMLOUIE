@@ -22,7 +22,7 @@ $foundation-palette: (
 $button-palette: $foundation-palette;
 
 $dark-color: #333;
-$light-color: #ddd;
+$light-color: #fff;
 
 //$body-background: #f4f1ef;
 
@@ -58,6 +58,8 @@ $topbar-link-color: null;
 }
 
 $titlebar-icon-hover: scale-color( $titlebar-icon-color, $lightness: -25% );
+
+$button-background-hover-lightness: -20%;
 
 // Media query ranges
 $small-range: (0em, 40em);

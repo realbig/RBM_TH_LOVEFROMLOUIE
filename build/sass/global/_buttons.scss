@@ -1,29 +1,51 @@
 .button {
 
-    @each $name, $color in $foundation-palette {
-        
-        &.hollow.#{$name} {
-            
-            color: $color;
-            border-width: 0.25em;
+	@each $name, $color in $foundation-palette {
+		
+		&.#{$name} {
+
+			@include light-or-dark-text( $color );
+
+			&:hover, &:focus {
+
+				$hover-background: scale-color( $color, $lightness: $button-background-hover-lightness );
+				@include light-or-dark-text( $hover-background );
+
+			}
+			
+		}
+
+		&.hollow.#{$name} {
+
+			color: $color;
+			border-width: 0.25em;
 			font-weight: 600;
-            
-            &:hover {
-                
-                background-color: $color;
-                border-color: $color;
-                @include light-or-dark-text( $color );
-                
-            }
-            
-        }
-    
-    }
-    
+
+			&:hover, &:focus {
+
+				background-color: $color;
+				border-color: $color;
+				@include light-or-dark-text( $color );
+
+			}
+
+		}
+
+	}
+
 }
 
-.give-btn {
+.give-btn, .give-btn[type="submit"] {
+
+	@include button( false, $primary-color, scale-color( $primary-color, $lightness: $button-background-hover-lightness ), 'auto', 'solid' );
 	
-	@include button( false, $primary-color, scale-color( $primary-color, $lightness: -15% ), 'auto', 'solid' );
-	
+	@include light-or-dark-text( $primary-color );
+
+	&:hover, &:focus {
+
+		$hover-background: scale-color( $primary-color, $lightness: $button-background-hover-lightness );
+		@include light-or-dark-text( $hover-background );
+
+	}
+
 }
