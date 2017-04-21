@@ -22,8 +22,9 @@
 		font-weight: 600;
 	}
 	
-	label[for^="give-donation-level-select"] {
-		display: block;
+	.give-donation-amount:before {
+		font-weight: 600;
+		color: $secondary-color;
 	}
 	
 	.give-select {

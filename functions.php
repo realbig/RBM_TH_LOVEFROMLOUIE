@@ -250,4 +250,20 @@ add_filter( 'give_donation_total_label', function( $label ) {
 	
 } );
 
+add_action( 'wp_head', function() { 
+	
+	?>
+
+		<style type="text/css">
+			
+			.give-donation-amount:before {
+				content: '<?php echo _x( 'Donation Amount:', 'Give Donation Total Replacement CSS Content Label Hack', 'love-from-louie' ); ?>' !important;
+			}
+			
+		</style>
+
+	<?php
+	
+} );
+
 require_once __DIR__ . '/admin/admin.php';
