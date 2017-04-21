@@ -1,7 +1,12 @@
 footer {
 	
 	background-color: $primary-color;
-    color: $secondary-color;
+	color: $secondary-color;
+	
+	label, .give-donation-amount:before {
+		font-weight: 600 !important;
+    	color: $secondary-color !important;
+	}
 	
 	// Base Padding on Column Gutters for a consistent feel
     $small-padding: map-get( $grid-column-gutter, 'small' );
