@@ -49,6 +49,43 @@
 		
 	}
 	
+	@media #{$small-only} {
+	
+		& > .row {
+			height: 100%;
+		}
+
+		.text-container {
+
+			height: 100%;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			
+			@include -zf-breakpoint-value( 'auto', $grid-column-gutter ) {
+				
+				$padding: rem-calc( $-zf-bp-value );
+
+				margin-right: $padding;
+				
+			}
+
+			&:before {
+				content: ' ';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+
+			.vertical-align {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+		}
+		
+	}
+	
 }
 
 .lfl-hero + .lfl-graph {
