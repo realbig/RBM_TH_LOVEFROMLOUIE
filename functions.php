@@ -304,4 +304,7 @@ add_filter( 'wp_nav_menu_items', function( $items, $args ) {
 	
 }, 10, 2 );
 
+// Override some stuff in WooCommerce
+locate_template( '/includes/hooks/product-hooks.php', true, true );
+
 require_once __DIR__ . '/admin/admin.php';

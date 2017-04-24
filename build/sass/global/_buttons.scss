@@ -28,7 +28,7 @@
 
 }
 
-.give-btn {
+.give-btn, .woocommerce a.button, .woocommerce a.button.alt, .woocommerce input.button, .woocommerce input.button.alt {
 
 	@include button( false, $primary-color, scale-color( $primary-color, $lightness: $button-background-hover-lightness ), 'auto', 'solid' );
 	
