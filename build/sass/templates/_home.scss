@@ -29,10 +29,14 @@
 			position: relative;
 		
 			&:first-of-type {
-			
-				position: absolute;
-				top: -80vh;
-				padding-top: 27vh;
+				
+				@media #{$medium-up} {
+					
+					position: absolute;
+					padding-top: 27vh;
+					top: -80vh;
+					
+				}
 
 			}
 			
