@@ -62,5 +62,28 @@ footer {
 		@include foundation-button-fix( $secondary-color );
 
     }
+	
+	@media #{$small-only} {
+		
+		.widget {
+			
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			
+			border-bottom: 1px solid $secondary-color;
+			
+			.give-form {
+				
+				&, .give-btn {
+				
+					margin-bottom: 0;
+					
+				}
+				
+			}
+			
+		}
+		
+	}
 
 }
