@@ -88,6 +88,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 									) );
 									?>
 								</div>
+						
+								<div class="top-bar-right top-bar-logo-no-overlap show-for-small-only">
+
+									<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+										<img src="<?php echo get_site_icon_url( 30 ); ?>" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+									</a>
+
+								</div>
 								
 							</div>
 

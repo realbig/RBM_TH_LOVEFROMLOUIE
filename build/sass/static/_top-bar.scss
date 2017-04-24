@@ -31,9 +31,6 @@
         }
         
     }
-	
-	// Placing this in a separate file because it is so specific to this implementation
-	@import "top-bar-logo";
     
     .top-bar-band {
         
@@ -97,6 +94,9 @@
         }
         
     }
+	
+	// Placing this in a separate file because it is so specific to this implementation
+	@import "top-bar-logo";
 
     .nav-menu {
 		

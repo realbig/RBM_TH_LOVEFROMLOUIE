@@ -18,3 +18,16 @@
         box-shadow: 0 0 0.25em $primary-color;
 	
 }
+
+.top-bar-logo-no-overlap {
+
+	background-color: #fff;
+	width: auto;
+	padding: 0.25rem;
+
+	a {
+		bottom: 0;
+		padding: .7rem .25rem;
+	}
+
+}
