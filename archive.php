@@ -18,13 +18,20 @@ get_header();
 
 ?>
 
-<h1 class="page-title columns small-12">
-    <?php the_archive_title(); ?>
-</h1>
+<div class="row">
+	
+	<div class="small-12 columns">
 
-<?php
-the_archive_description( '<div class="taxonomy-description columns small-12">', '</div>' );
+		<h1 class="page-title columns small-12">
+			<?php the_archive_title(); ?>
+		</h1>
 
-get_template_part( 'partials/loop/loop', get_post_type() );
+		<?php the_archive_description( '<div class="taxonomy-description columns small-12">', '</div>' ); ?>
+		
+	</div>
+	
+</div>
+
+<?php get_template_part( 'partials/loop/loop', get_post_type() );
 
 get_footer();
