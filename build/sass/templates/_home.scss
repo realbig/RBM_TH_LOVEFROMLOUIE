@@ -34,7 +34,14 @@
 					
 					position: absolute;
 					padding-top: 27vh;
-					top: -80vh;
+					top: -86vh;
+					
+				}
+				
+				@media only screen and (min-width: 40.063em) and (max-width:1385px) {
+					
+					padding-top: 44vh;
+					height: 87vh !important;
 					
 				}
 

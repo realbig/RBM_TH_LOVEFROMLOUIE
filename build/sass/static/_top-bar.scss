@@ -31,6 +31,19 @@
         }
         
     }
+	
+	// Fix overlapping menu. Hopefully they're using a laptop made within the past 10 years
+	@media screen and (max-width: 1385px) {
+		
+		.show-for-small-only {
+            display: inline-block !important;
+        }
+        
+        .hide-for-small-only {
+            display: none;
+        }
+		
+	}
     
     .top-bar-band {
         
@@ -60,12 +73,12 @@
 		
 		z-index: 2;
 		
-		@media #{$medium-up} {
+		@media only screen and (min-width: 1386px) {
 			
 			.top-bar-band-container {
 				position: relative;
-				width: 83%;
-				left: 18%;
+				width: 78%;
+				left: 23%;
 			}
 			
 		}
