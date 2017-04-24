@@ -8,6 +8,16 @@
 		width: 100%;
 		z-index: 42;
 	}
+	
+	.menu-icon-text {
+		
+		color: $titlebar-icon-color;
+		
+		&:hover {
+			color: $titlebar-icon-hover;
+		}
+		
+	}
     
     // Phablet Landscape and Portrait iPad Fix
     @media screen and (max-width: 733px) and (orientation: landscape), #{$medium-only} and (orientation: portrait) {
