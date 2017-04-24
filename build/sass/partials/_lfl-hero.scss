@@ -4,7 +4,6 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	
-	color: $secondary-color;
     width: 100.5%;
 	
 	@media #{$small-only} {
@@ -25,7 +24,11 @@
 	
 	.give-donation-amount:before {
 		font-weight: 600;
+	}
+	
+	.give-donation-amount:before, h1, h2, h3, h4, h5, h6, label, a, button {
 		color: $secondary-color;
+		@include text-stroke( darken( $primary-color, 20 ) );
 	}
 	
 	.give-select {
@@ -63,12 +66,28 @@
 			padding: 0;
 			margin: 0;
 			
+			h1, h2, h3, h4, h5, h6 {
+				margin-top: 1em;
+			}
+			
 			@include -zf-breakpoint-value( 'auto', $grid-column-gutter ) {
 				
 				$padding: rem-calc( $-zf-bp-value );
 
 				margin-right: $padding;
 				
+			}
+			
+			.give-donation-amount {
+				padding: 0 2em;
+			}
+			
+			select.give-select-level {
+				margin: 0 auto;
+			}
+			
+			.give-donation-amount, select.give-select-level {
+				margin-bottom: 0.5em;
 			}
 
 			&:before {
