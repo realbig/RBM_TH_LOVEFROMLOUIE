@@ -15,7 +15,8 @@
 
 	// Can't find the option to unhide this
 	label[for^="give-donation-level-select"] {
-		display: block;
+		display: inline-block;
+		width: 100%;
 	}
 
 }

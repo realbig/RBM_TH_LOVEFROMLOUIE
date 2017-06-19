@@ -1,11 +1,13 @@
 footer {
 	
 	background-color: $primary-color;
-	color: $secondary-color;
+	@include light-or-dark-text( $primary-color );
+	
+	$footer-link: scale-color( $secondary-color, $lightness: 35% );
 	
 	label, .give-donation-amount:before {
 		font-weight: 600 !important;
-    	color: $secondary-color !important;
+    	color: $footer-link !important;
 	}
 	
 	// Base Padding on Column Gutters for a consistent feel
@@ -20,10 +22,10 @@ footer {
 
     a {
 
-        color: $secondary-color;
+        color: $footer-link;
 
         &:hover {
-            color: scale-color( $secondary-color, $lightness: -15% );
+            color: scale-color( $footer-link, $lightness: -15% );
         }
 
     }
@@ -31,6 +33,10 @@ footer {
     &, a {
         font-weight: bold;
     }
+	
+	h1, h2, h3, h4, h5, h6 {
+		@include light-or-dark-text( $primary-color );
+	}
 
     .widget_nav_menu {
 
