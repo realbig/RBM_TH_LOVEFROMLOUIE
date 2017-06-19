@@ -54,21 +54,23 @@
 
 	@media screen and (min-width:1385px) and (max-width:1771px) {
 
-		top: -70vh !important;
+		top: -74vh !important;
 		padding-top: 13vh !important;
-
-	}
-
-	@media screen and (max-width: 733px) and (orientation: landscape), screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
-
-		top: -84vh !important;
 
 	}
 
 	@media screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
 
+		top: -84vh !important;
 		padding-top: 45vh !important;
 
+	}
+	
+	@media screen and (min-width: 640px) and (max-width: 776px) {
+		
+		top: -72vh !important;
+		padding-top: 32vh !important;
+		
 	}
 
 	// Phablet Landscape and Portrait iPad Fix
