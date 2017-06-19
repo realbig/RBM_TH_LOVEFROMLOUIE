@@ -22,6 +22,11 @@
 		padding-top: 27vh !important;
 		top: -86vh !important;
 
+		.give-form-wrap label[for^=give-donation-level-select] {
+			display: inline-block;
+			width: 100%;
+		}
+
 	}
 
 	@media #{$large-up} {
@@ -40,22 +45,29 @@
 
 	}
 
-	@media #{$large-up} and (orientation: portrait), (min-width: #{lower-bound($medium-range)}) and (max-width: #{lower-bound($large-range)}) and (orientation: landscape), screen and (min-width:1385px) and (max-width:1771px) {
+	@media #{$large-up} and (orientation: portrait), (min-width: #{lower-bound($medium-range)}) and (max-width: #{lower-bound($large-range)}) and (orientation: landscape) {
 
 		top: -50vh !important;
 		padding-top: 28vh !important;
 
 	}
 
+	@media screen and (min-width:1385px) and (max-width:1771px) {
+
+		top: -70vh !important;
+		padding-top: 13vh !important;
+
+	}
+
 	@media screen and (max-width: 733px) and (orientation: landscape), screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
 
-		top: -74vh !important;
+		top: -84vh !important;
 
 	}
 
 	@media screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
 
-		padding-top: 58vh !important;
+		padding-top: 45vh !important;
 
 	}
 
@@ -80,6 +92,10 @@
 			select.give-select-level, div.give-donation-amount {
 				margin: 0 auto;
 				margin-bottom: 1em;
+			}
+
+			div.give-donation-amount {
+				margin-left: 1.6em;
 			}
 
 		}
