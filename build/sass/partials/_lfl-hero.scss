@@ -1,42 +1,114 @@
 .lfl-hero {
-	
+
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-    width: 100.5%;
-	
+
+	width: 100.5%;
+
+	padding-top: 58vh !important;
+
 	@media #{$small-only} {
-		
+
 		width: 105%;
 		max-height: 75vh;
 		height: 50% !important;
-		
+		padding-top: 0 !important;
+
 	}
-	
+
+	@media #{$medium-up} {
+
+		padding-top: 27vh !important;
+		top: -86vh !important;
+
+	}
+
+	@media #{$large-up} {
+
+		top: -33vh !important;
+		padding-top: 11vh !important;
+
+	}
+
+	@media #{$medium-up} and (orientation: portrait) {
+
+		width: 105%;
+		max-height: 75vh;
+		height: 50% !important;
+		top: -57vh !important;
+
+	}
+
+	@media #{$large-up} and (orientation: portrait), (min-width: #{lower-bound($medium-range)}) and (max-width: #{lower-bound($large-range)}) and (orientation: landscape), screen and (min-width:1385px) and (max-width:1771px) {
+
+		top: -50vh !important;
+
+	}
+
+	@media screen and (max-width: 733px) and (orientation: landscape), screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
+
+		top: -74vh !important;
+		//padding-top: 
+
+	}
+
+	@media screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
+
+		padding-top: 44vh !important;
+
+	}
+
+	// Phablet Landscape and Portrait iPad Fix
+	@media screen and (max-width: 733px) and (orientation: landscape), #{$medium-up} and (orientation: portrait) {
+
+		background-position: left bottom;
+
+		.hide-for-small-only {
+			display: none;
+		}
+
+		.text-container {
+
+			width: 100%;
+			text-align: center;
+
+			.give-form-wrap {
+				display: inline-block;
+			}
+
+			select.give-select-level, div.give-donation-amount {
+				margin: 0 auto;
+				margin-bottom: 1em;
+			}
+
+		}
+
+	}
+
 	h1, h2, h3, h4, h5, h6, label {
 		color: $secondary-color;
 	}
-	
+
 	label {
 		font-weight: 600;
 	}
-	
+
 	.give-donation-amount:before {
 		font-weight: 600;
 	}
-	
+
 	.give-donation-amount:before, h1, h2, h3, h4, h5, h6, label, a, button {
 		color: $secondary-color;
 		@include text-stroke( darken( $primary-color, 20 ) );
 	}
-	
+
 	.give-select {
 		width: 50%;
 	}
-	
+
 	.give-btn {
-		
+
 		background: transparent;
 		color: $secondary-color;
 		border-color: $secondary-color;
@@ -50,11 +122,11 @@
 			@include light-or-dark-text( $secondary-color );
 
 		}
-		
+
 	}
-	
+
 	@media #{$small-only} {
-	
+
 		& > .row {
 			height: 100%;
 		}
@@ -65,27 +137,27 @@
 			text-align: center;
 			padding: 0;
 			margin: 0;
-			
+
 			h1, h2, h3, h4, h5, h6 {
 				margin-top: 1em;
 			}
-			
+
 			@include -zf-breakpoint-value( 'auto', $grid-column-gutter ) {
-				
+
 				$padding: rem-calc( $-zf-bp-value );
 
 				margin-right: $padding;
-				
+
 			}
-			
+
 			.give-donation-amount {
 				padding: 0 2em;
 			}
-			
+
 			select.give-select-level {
 				margin: 0 auto;
 			}
-			
+
 			.give-donation-amount, select.give-select-level {
 				margin-bottom: 0.5em;
 			}
@@ -103,7 +175,7 @@
 			}
 
 		}
-		
+
 	}
-	
+
 }
