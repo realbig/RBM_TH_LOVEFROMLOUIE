@@ -1,4 +1,4 @@
-.lfl-blog {
+.lfl-stories {
     
     // Base Padding on Column Gutters for a consistent feel
     $small-padding: map-get( $grid-column-gutter, 'small' );
@@ -29,7 +29,7 @@
 		
     }
     
-    .type-post {
+    .type-lfl-story {
 		margin-bottom: 1em;
 	}
     

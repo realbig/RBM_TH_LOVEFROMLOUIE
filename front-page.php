@@ -22,7 +22,7 @@ include locate_template( 'partials/home/hero.php' );
 
 include locate_template( 'partials/home/graph.php' );
 
-include locate_template( 'partials/home/blog.php' );
+include locate_template( 'partials/home/stories.php' );
 
 get_footer();
 ?>

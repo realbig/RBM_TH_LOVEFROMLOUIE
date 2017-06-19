@@ -1,6 +1,6 @@
 <?php
 /**
- * Posts on the Home Page
+ * Stories on the Home Page
  *
  * @since       1.0.0
  * @package     PatRobertson
@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || die();
 
 // Just in case there are any Hooks for Post
-locate_template( '/includes/hooks/post-hooks.php', true, true );
+locate_template( '/includes/hooks/lfl-story-hooks.php', true, true );
 
 global $post;
 
@@ -19,7 +19,7 @@ $posts_per_page = get_post_meta( get_the_ID(), '_rbm_lfl_home_blog_posts_per_pag
 if ( empty( $posts_per_page ) ) $posts_per_page = 2;
 
 $query = new WP_Query( array(
-	'post_type' => 'post',
+	'post_type' => 'lfl-story',
 	'posts_per_page' => $posts_per_page,
 ) );
 
@@ -53,7 +53,7 @@ switch ( $posts_per_page ) {
 
 ?>
 
-<div class="lfl-blog row expanded">
+<div class="lfl-stories row expanded">
 	
 	<h1><?php echo get_post_meta( get_the_ID(), '_rbm_lfl_home_blog_title', true ); ?></h1>
 
