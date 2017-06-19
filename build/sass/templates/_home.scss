@@ -33,16 +33,16 @@
 				@media #{$medium-up} {
 					
 					position: absolute;
-					padding-top: 27vh;
-					top: -86vh;
+					padding-top: 16.65em;
+					top: -53.0333em;
 					
 				}
 				
 				// Start of Medium, to some value(?)
 				@media only screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
 					
-					padding-top: 44vh;
-					height: 87vh !important;
+					padding-top: 27.1333em;
+					//height: 87vh !important;
 					
 				}
 

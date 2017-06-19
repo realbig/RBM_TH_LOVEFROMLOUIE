@@ -11,7 +11,21 @@
     }
 	
 	@media #{$small-only} {
-		margin-top: 0 !important;
+		
+		&, & > .row {
+		
+			margin-top: 0 !important;
+			
+		}
+		
+	}
+	
+	@media #{$xlarge-up} {
+		
+		& > .row {
+			margin-top: -375px !important;
+		}
+		
 	}
 	
 }

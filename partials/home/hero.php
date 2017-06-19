@@ -13,7 +13,7 @@ $hero_image = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_rbm_lf
 
 ?>
 
-<div class="lfl-hero row expanded" style="background-image: url(<?php echo $hero_image[0]; ?>); height: <?php echo $hero_image[2]; ?>px;">
+<div class="lfl-hero row expanded" style="background-image: url(<?php echo $hero_image[0]; ?>); height: <?php echo ( $hero_image[2] - 50 ); ?>px;">
 	
 	<div class="row">
 

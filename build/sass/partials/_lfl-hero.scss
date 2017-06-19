@@ -4,104 +4,29 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	width: 100.5%;
-
-	padding-top: 58vh !important;
+	width: 105% !important;
+	max-height: 46.25em !important;
 
 	@media #{$small-only} {
 
-		width: 105%;
-		max-height: 75vh;
 		height: 50% !important;
-		padding-top: 0 !important;
-
-	}
-
-	@media #{$medium-up} {
-
-		padding-top: 27vh !important;
-		top: -86vh !important;
-
-		.give-form-wrap label[for^=give-donation-level-select] {
-			display: inline-block;
-			width: 100%;
-		}
-
-	}
-
-	@media #{$large-up} {
-
-		top: -33vh !important;
-		padding-top: 11vh !important;
-
-	}
-
-	@media #{$medium-up} and (orientation: portrait) {
-
-		width: 105%;
-		max-height: 75vh;
-		height: 50% !important;
-		top: -57vh !important;
-
-	}
-
-	@media #{$large-up} and (orientation: portrait), (min-width: #{lower-bound($medium-range)}) and (max-width: #{lower-bound($large-range)}) and (orientation: landscape) {
-
-		top: -50vh !important;
-		padding-top: 28vh !important;
-
-	}
-
-	@media screen and (min-width:1385px) and (max-width:1771px) {
-
-		top: -74vh !important;
-		padding-top: 13vh !important;
-
-	}
-
-	@media screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
-
-		top: -84vh !important;
-		padding-top: 45vh !important;
 
 	}
 	
-	@media screen and (min-width: 640px) and (max-width: 776px) {
-		
-		top: -72vh !important;
-		padding-top: 32vh !important;
-		
+	@media only screen and (min-width: 1386px) {
+		margin-top: -40px; // Remove white line at top
 	}
-
-	// Phablet Landscape and Portrait iPad Fix
-	@media screen and (max-width: 733px) and (orientation: landscape), #{$medium-up} and (orientation: portrait) {
-
-		background-position: left bottom;
-
-		.hide-for-small-only {
-			display: none;
-		}
-
-		.text-container {
-
-			width: 100%;
-			text-align: center;
-
-			.give-form-wrap {
-				display: inline-block;
-			}
-
-			select.give-select-level, div.give-donation-amount {
-				margin: 0 auto;
-				margin-bottom: 1em;
-			}
-
-			div.give-donation-amount {
-				margin-left: 1.6em;
-			}
-
-		}
-
+	
+	@media #{$xlarge-up} {
+		margin-top: -80px; // Remove white line at top and then some for consistency
+	}
+	
+	@media #{$small-only}, #{$large-up} {
+		padding-top: 0 !important;
+	}
+	
+	@media #{$medium-only} {
+		padding-top: 6.65em !important;
 	}
 
 	h1, h2, h3, h4, h5, h6, label {
@@ -143,55 +68,62 @@
 
 	}
 
-	@media #{$small-only} {
+	& > .row {
+		height: 100%;
+	}
 
-		& > .row {
-			height: 100%;
-		}
+	.text-container {
 
-		.text-container {
+		height: 100%;
 
-			height: 100%;
+		@media #{$small-only} {
+
 			text-align: center;
-			padding: 0;
-			margin: 0;
 
-			h1, h2, h3, h4, h5, h6 {
-				margin-top: 1em;
-			}
-
-			@include -zf-breakpoint-value( 'auto', $grid-column-gutter ) {
-
-				$padding: rem-calc( $-zf-bp-value );
-
-				margin-right: $padding;
-
+			select.give-select-level {
+				margin: 0 auto;
 			}
 
 			.give-donation-amount {
 				padding: 0 2em;
 			}
 
-			select.give-select-level {
-				margin: 0 auto;
-			}
+		}
 
-			.give-donation-amount, select.give-select-level {
-				margin-bottom: 0.5em;
-			}
+		padding: 0;
+		margin: 0;
 
-			&:before {
-				content: ' ';
-				display: inline-block;
-				vertical-align: middle;
-				height: 100%;
-			}
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 1em;
+		}
 
-			.vertical-align {
-				display: inline-block;
-				vertical-align: middle;
-			}
+		@include -zf-breakpoint-value( 'auto', $grid-column-gutter ) {
 
+			$padding: rem-calc( $-zf-bp-value );
+
+			margin-right: $padding;
+
+		}
+
+		.give-donation-amount, select.give-select-level {
+			margin-bottom: 0.5em;
+		}
+		
+		.give-form-wrap label[for^="give-donation-level-select"] {
+			display: inline-block;
+			width: 100%;
+		}
+
+		&:before {
+			content: ' ';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.vertical-align {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
 	}
