@@ -14,11 +14,11 @@
 	}
 	
 	@media only screen and (min-width: 1386px) {
-		margin-top: -40px; // Remove white line at top
+		margin-top: -140px; // Remove white line at top
 	}
 	
 	@media #{$xlarge-up} {
-		margin-top: -80px; // Remove white line at top and then some for consistency
+		margin-top: -280px; // Remove white line at top and then some for consistency
 	}
 	
 	@media #{$small-only}, #{$large-up} {
@@ -75,8 +75,14 @@
 	.text-container {
 
 		height: 100%;
+		
+		@media #{$xlarge-up} {
+		
+			padding-top: 7em;
 
-		@media #{$small-only} {
+		}
+
+		@media #{$small-only}, #{$medium-only} {
 
 			text-align: center;
 
@@ -85,9 +91,17 @@
 			}
 
 			.give-donation-amount {
-				padding: 0 2em;
+				padding: 0 6.3em;
 			}
 
+		}
+		
+		@media #{$medium-only} {
+			
+			.give-donation-amount {
+				padding: 0 12.6em;
+			}
+			
 		}
 
 		padding: 0;
@@ -110,7 +124,6 @@
 		}
 
 		&:before {
-			content: ' ';
 			display: inline-block;
 			vertical-align: middle;
 			height: 100%;

@@ -20,6 +20,22 @@
 		
 	}
 	
+	@media screen and (min-width: #{lower-bound($medium-range)}) and (max-width: 1385px) {
+		
+		& > .row {
+			margin-top: -200px !important;
+		}
+		
+	}
+	
+	@media screen and (min-width: 1386px) and (max-width: #{lower-bound($xlarge-range)}) {
+		
+		& > .row {
+			margin-top: -350px !important;
+		}
+		
+	}
+	
 	@media #{$xlarge-up} {
 		
 		& > .row {
