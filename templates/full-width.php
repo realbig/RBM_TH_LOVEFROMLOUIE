@@ -23,6 +23,12 @@ the_post();
         'columns',
         'small-12',
     ) ); ?>>
+		
+		<?php if ( has_post_thumbnail() ) : ?>
+            <div class="thumbnail alignleft">
+                <?php the_post_thumbnail( 'medium' ); ?>
+            </div>
+        <?php endif; ?>
 
         <h1 class="page-title">
             <?php the_title(); ?>
