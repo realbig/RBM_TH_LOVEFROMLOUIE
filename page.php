@@ -26,6 +26,12 @@ the_post();
         'small-12',
         is_active_sidebar( 'sidebar-main' ) ? 'medium-9': 'no-sidebar',
     ) ); ?>>
+		
+		<?php if ( has_post_thumbnail() ) : ?>
+            <div class="thumbnail alignleft">
+                <?php the_post_thumbnail( 'medium' ); ?>
+            </div>
+        <?php endif; ?>
 
         <h1 class="page-title">
             <?php the_title(); ?>

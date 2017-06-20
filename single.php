@@ -29,7 +29,7 @@ the_post();
         
         <?php if ( has_post_thumbnail() ) : ?>
             <div class="thumbnail alignleft">
-                <?php the_post_thumbnail( 'full' ); ?>
+                <?php the_post_thumbnail( 'medium' ); ?>
             </div>
         <?php endif; ?>
 

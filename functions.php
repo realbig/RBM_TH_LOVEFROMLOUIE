@@ -132,18 +132,24 @@ add_action( 'widgets_init', function () {
     	'name' => __( 'Footer Left', 'love-from-louie' ),
     	'id' => 'footer-left',
     	'description' => __( 'Footer Left.', 'love-from-louie' ),
+		'before_title'  => '<h4 class="widgettitle">',
+		'after_title'   => '</h4>',
     ) );
 	
 	register_sidebar( array(
     	'name' => __( 'Footer Center', 'love-from-louie' ),
     	'id' => 'footer-center',
     	'description' => __( 'Footer Center.', 'love-from-louie' ),
+		'before_title'  => '<h4 class="widgettitle">',
+		'after_title'   => '</h4>',
     ) );
 	
 	register_sidebar( array(
     	'name' => __( 'Footer Right', 'love-from-louie' ),
     	'id' => 'footer-right',
     	'description' => __( 'Footer Right.', 'love-from-louie' ),
+		'before_title'  => '<h4 class="widgettitle">',
+		'after_title'   => '</h4>',
     ) );
     
 } );

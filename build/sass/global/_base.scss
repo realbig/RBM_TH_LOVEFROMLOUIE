@@ -165,3 +165,11 @@ blockquote {
     }
 
 }
+
+// Only H1 gets the frilly font
+h2, h3, h4, h5, h6 {
+	
+	font-family: $body-font-family;
+	font-weight: 700;
+	
+}
