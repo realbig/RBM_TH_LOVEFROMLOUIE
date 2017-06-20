@@ -86,6 +86,14 @@ function lfl_add_home_metaboxes() {
             'page',
             'normal'
         );
+		
+		add_meta_box(
+            'pat-home-partners',
+            _x( 'Partners Section', 'Home Partners Metabox Title', 'love-from-louie' ),
+            'lfl_home_partner_metabox_content',
+            'page',
+            'normal'
+        );
         
     }
     
@@ -229,6 +237,26 @@ function lfl_home_blog_metabox_content() {
 		false,
 		array(
 			'min' => '1',
+		)
+	);
+    
+}
+
+/**
+ * Put fields in the Partners Metabox
+ * 
+ * @since       1.0.0
+ * @return      void
+ */
+function lfl_home_partner_metabox_content() {
+	
+	rbm_do_field_text(
+		'lfl_home_partner_title',
+		_x( 'Partners Section Title', 'Home Partners Section Title Label', 'love-from-louie' ),
+		false,
+		array(
+			'input_atts' => array(
+			),
 		)
 	);
     

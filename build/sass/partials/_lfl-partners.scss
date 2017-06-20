@@ -1,0 +1,23 @@
+.lfl-partners {
+    
+    // Base Padding on Column Gutters for a consistent feel
+    $small-padding: map-get( $grid-column-gutter, 'small' );
+    $medium-padding: map-get( $grid-column-gutter, 'medium' );
+    
+    padding: $small-padding;
+	text-align: center;
+    
+    @media #{$medium-up} {
+        padding: $medium-padding;
+    }
+    
+    .type-lfl-partner {
+		margin-bottom: 1em;
+	}
+    
+    img {
+        display: block;
+		margin: 0 auto;
+    }
+    
+}

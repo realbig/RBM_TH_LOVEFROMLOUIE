@@ -24,5 +24,6 @@ include locate_template( 'partials/home/graph.php' );
 
 include locate_template( 'partials/home/stories.php' );
 
+include locate_template( 'partials/home/partners.php' );
+
 get_footer();
-?>
