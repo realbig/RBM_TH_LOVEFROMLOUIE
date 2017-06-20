@@ -30,7 +30,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6, label {
-		color: $secondary-color;
+		color: #fff;
 	}
 
 	label {
@@ -42,7 +42,7 @@
 	}
 
 	.give-donation-amount:before, h1, h2, h3, h4, h5, h6, label, a, button {
-		color: $secondary-color;
+		color: #fff;
 		@include text-stroke( darken( $primary-color, 20 ) );
 	}
 
@@ -53,16 +53,16 @@
 	.give-btn {
 
 		background: transparent;
-		color: $secondary-color;
-		border-color: $secondary-color;
+		color: #fff;
+		border-color: #fff;
 		border-width: 0.25em;
 		font-weight: 600;
 
 		&:hover {
 
-			background-color: $secondary-color;
-			border-color: $secondary-color;
-			@include light-or-dark-text( $secondary-color );
+			background-color: #fff;
+			border-color: #fff;
+			@include light-or-dark-text( #fff );
 
 		}
 
