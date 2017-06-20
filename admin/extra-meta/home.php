@@ -94,6 +94,14 @@ function lfl_add_home_metaboxes() {
             'page',
             'normal'
         );
+		
+		add_meta_box(
+            'pat-home-book',
+            _x( 'Book Section', 'Home Book Metabox Title', 'love-from-louie' ),
+            'lfl_home_book_metabox_content',
+            'page',
+            'normal'
+        );
         
     }
     
@@ -230,15 +238,6 @@ function lfl_home_blog_metabox_content() {
 			),
 		)
 	);
-	
-	rbm_do_field_number(
-		'lfl_home_blog_posts_per_page',
-		_x( 'Number of Stories to Show', 'Home Stories Section Posts Per Page', 'love-from-louie' ),
-		false,
-		array(
-			'min' => '1',
-		)
-	);
     
 }
 
@@ -257,6 +256,53 @@ function lfl_home_partner_metabox_content() {
 		array(
 			'input_atts' => array(
 			),
+		)
+	);
+    
+}
+
+/**
+ * Put fields in the Book Metabox
+ * 
+ * @since       1.0.0
+ * @return      void
+ */
+function lfl_home_book_metabox_content() {
+	
+	rbm_do_field_text(
+		'lfl_home_book_text',
+		_x( 'Book Section Text', 'Home Book Section Text Label', 'love-from-louie' ),
+		false,
+		array(
+		)
+	);
+	
+	rbm_do_field_text(
+		'lfl_home_book_button_text',
+		_x( 'Book Section Button Text', 'Home Book Section Button Text Label', 'love-from-louie' ),
+		false,
+		array(
+		)
+	);
+	
+	rbm_do_field_text(
+		'lfl_home_book_button_url',
+		_x( 'Book Section Button URL', 'Home Book Section Button URL Label', 'love-from-louie' ),
+		false,
+		array(
+		)
+	);
+	
+	rbm_do_field_media(
+		'lfl_home_book_image',
+		_x( 'Book Section Image', 'Home Book Section Image Label', 'love-from-louie' ),
+		false,
+		array(
+			'button_text' => _x( 'Upload/Choose Book Image', 'Home Book Section Image Button Text', 'love-from-louie' ),
+			'button_remove_text' => _x( 'Remove Book Image', 'Home Book Section Image Remove Button Text', 'love-from-louie' ),
+			'type' => 'image',
+			'window_title' => _x( 'Choose Book Image', 'Home Book Section Image Window Title', 'love-from-louie' ),
+			'window_button_text' => _x( 'Use Book Image', 'Home Book Section Image Window Button Text', 'love-from-louie' ),
 		)
 	);
     

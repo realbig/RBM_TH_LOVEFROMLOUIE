@@ -1,0 +1,56 @@
+.lfl-book {
+
+	// Base Padding on Column Gutters for a consistent feel
+	$small-padding: map-get( $grid-column-gutter, 'small' );
+	$medium-padding: map-get( $grid-column-gutter, 'medium' );
+
+	padding: $small-padding;
+	text-align: center;
+
+	overflow: hidden;
+	position: relative;
+
+	@media #{$medium-up} {
+		padding: $medium-padding;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+		@include text-stroke( darken( $primary-color, 20 ) );
+	}
+	
+	.button {
+		@include text-stroke( darken( $primary-color, 20 ) );
+	}
+
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-color: $secondary-color;
+	}
+
+	.row {
+
+		@media #{$medium-up} {
+
+			height: 200px;
+
+			.columns {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+		}
+
+		position: relative;
+
+	}
+
+}

@@ -42,10 +42,26 @@
 		text-align: left;
 		margin-bottom: 0;
 	}
+	
+	@media #{$small-only} {
+		p.timestamp-container {
+			text-align: center;
+		}
+	}
     
     .button {
         margin-top: 1em;
 		text-align: left;
     }
+	
+	@media #{$medium-up} {
+	
+		.right {
+
+			text-align: left;
+
+		}
+		
+	}
     
 }
