@@ -31,7 +31,7 @@ $image_url = wp_get_attachment_image_url( $attachment_id, 'full' );
 		
 		<div class="small-12 medium-4 columns button-container">
 			
-			<a class="button white hollow" href="<?php echo rbm_get_field( 'lfl_home_book_button_url' ); ?>" target="_blank">
+			<a class="button light-gray hollow" href="<?php echo rbm_get_field( 'lfl_home_book_button_url' ); ?>" target="_blank">
 				<?php echo rbm_get_field( 'lfl_home_book_button_text' ); ?>
 			</a>
 			
