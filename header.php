@@ -61,51 +61,55 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <?php endif; ?>
 
                     <div class="top-bar">
-
-                        <div class="top-bar-left top-bar-band row expanded">
-							
-							<div class="small-12 top-bar-band-container columns">
-                            
-								<div class="show-for-small-only menu-icon-container" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-									<button type="button" data-open="offCanvasLeft">
-										<span class="menu-icon"></span>
-										<div class="menu-icon-text">
-											<?php echo _x( 'Menu', 'Hamburger Button Label', 'love-from-louie' ); ?>
-										</div>
-									</button>
-								</div>
-
-								<div class="top-bar-right hide-for-small-only nav-menu">
-									<?php
-									wp_nav_menu( array(
-										'container' => false,
-										'menu' => __( 'Primary Menu', 'love-from-louie' ),
-										'menu_class' => 'dropdown menu',
-										'theme_location' => 'primary-menu',
-										'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-										'fallback_cb' => false,
-										'walker' => new Foundation_Nav_Walker(),
-									) );
-									?>
-								</div>
 						
-								<div class="top-bar-right top-bar-logo-no-overlap show-for-small-only">
+						<div class="top-bar-content">
 
-									<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-										<img src="<?php echo get_site_icon_url( 30 ); ?>" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-									</a>
+							<div class="top-bar-left top-bar-band row expanded">
+
+								<div class="small-12 top-bar-band-container columns">
+
+									<div class="show-for-small-only menu-icon-container" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+										<button type="button" data-open="offCanvasLeft">
+											<span class="menu-icon"></span>
+											<div class="menu-icon-text">
+												<?php echo _x( 'Menu', 'Hamburger Button Label', 'love-from-louie' ); ?>
+											</div>
+										</button>
+									</div>
+
+									<div class="top-bar-right hide-for-small-only nav-menu">
+										<?php
+										wp_nav_menu( array(
+											'container' => false,
+											'menu' => __( 'Primary Menu', 'love-from-louie' ),
+											'menu_class' => 'dropdown menu',
+											'theme_location' => 'primary-menu',
+											'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+											'fallback_cb' => false,
+											'walker' => new Foundation_Nav_Walker(),
+										) );
+										?>
+									</div>
+
+									<div class="top-bar-right top-bar-logo-no-overlap show-for-small-only">
+
+										<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+											<img src="<?php echo get_site_icon_url( 30 ); ?>" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+										</a>
+
+									</div>
 
 								</div>
-								
+
 							</div>
 
-                        </div>
-						
-						<div class="top-bar-left top-bar-logo hide-for-small-only">
-						
-							<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-								<img src="<?php echo get_site_icon_url( 175 ); ?>" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-							</a>
+							<div class="top-bar-left top-bar-logo hide-for-small-only">
+
+								<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+									<img src="<?php echo get_site_icon_url( 175 ); ?>" title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+								</a>
+
+							</div>
 							
 						</div>
 

@@ -3,6 +3,28 @@
     font-weight: 600;
     position: relative;
 	
+	@media #{$medium-up} {
+		background-color: $primary-color;
+	}
+	
+	@media screen and (min-width: 1385px) {
+		height: 13rem;
+	}
+	
+	@media #{$xlarge-up} {
+		height: 22rem;
+	}
+	
+	.top-bar-content {
+		
+		@media #{$large-up} {
+			@include grid-row-size($grid-row-width);
+			margin-right: auto;
+			margin-left: auto;
+		}
+		
+	}
+	
 	@media #{$small-only} {
 		background-color: $primary-color;
 		width: 100%;
@@ -81,8 +103,8 @@
 			
 			.top-bar-band-container {
 				position: relative;
-				width: 78%;
-				left: 23%;
+				width: 100%;
+				left: 14%;
 			}
 			
 		}

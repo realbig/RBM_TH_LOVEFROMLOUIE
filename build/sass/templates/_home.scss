@@ -1,67 +1,63 @@
 .home {
-	
+
 	.top-bar {
-		
+
 		@media #{$small-only} {
-			
+
 			-webkit-box-shadow: 0 0 0.25em #000;
-        		box-shadow: 0 0 0.25em #000;
-			
+			box-shadow: 0 0 0.25em #000;
+
 		}
-		
-		.top-bar-band {
-			
-			@media #{$medium-up} {
-				-webkit-box-shadow: 0 0 0.25em #000;
-        			box-shadow: 0 0 0.25em #000;
-			}
-			
+
+		@media #{$medium-up} {
+			-webkit-box-shadow: 0 0 0.25em #000;
+			box-shadow: 0 0 0.25em #000;
 		}
-		
+
 	}
-	
+
 	#site-content {
-		
+
 		padding: 0;
-		
+
 		& > .row {
-			
+
 			position: relative;
-		
+
 			&:first-of-type {
-				
+
 				@media #{$medium-up} {
-					
+
 					position: absolute;
 					padding-top: 16.65em;
 					top: -53.0333em;
-					
+
 				}
-				
+
 				// Start of Medium, to some value(?)
 				@media only screen and (min-width: #{lower-bound($medium-range)}) and (max-width:1385px) {
-					
+
 					padding-top: 27.1333em;
 					//height: 87vh !important;
-					
+
 				}
 
 			}
-			
+
 			&:nth-of-type( 2n + 1 ) {
-				
+
 				background-color: lighten( desaturate( $secondary-color, 20 ), 20 );
-				
+
 			}
-			
+
 		}
-		
+
 		@import "../partials/lfl-hero";
 		@import "../partials/lfl-graph";
 		@import "../partials/lfl-stories";
 		@import "../partials/lfl-partners";
 		@import "../partials/lfl-book";
-		
+
 	}
-	
+
 }
