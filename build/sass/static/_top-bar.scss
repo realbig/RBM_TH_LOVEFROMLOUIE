@@ -9,6 +9,10 @@
 		z-index: 42;
 	}
 	
+	@media #{$medium-up} {
+		padding: 0;
+	}
+	
 	.menu-icon-text {
 		
 		color: $titlebar-icon-color;
@@ -47,7 +51,7 @@
     
     .top-bar-band {
         
-        overflow: hidden;
+        overflow: visible;
 		
 		// Base Padding on Column Gutters for a consistent feel
 		$small-padding: map-get( $grid-column-gutter, 'small' );
@@ -58,7 +62,7 @@
 		@media #{$medium-up} {
 			
 			padding: $medium-padding / 2;
-			position: absolute;
+			position: relative;
 			right: 0%;
 			top: 0%;
 			transform: translate( 0%, 0% );
