@@ -56,7 +56,7 @@ class LFL_Recent_Story_Donation_Widget extends WP_Widget {
 					<?php printf( _x( 'Help %s,', 'Help this Animal header', 'love_from_louie' ), get_the_title() ); ?>
 				</h2>
 
-			<?php else : 
+			<?php elseif ( get_post_type() == 'lfl-story' ) : 
 		
 				global $post;
 
@@ -74,8 +74,14 @@ class LFL_Recent_Story_Donation_Widget extends WP_Widget {
 					</h2>
 
 				<?php endwhile; wp_reset_postdata();
+		
+			else : ?>
+				
+				<h2 class="widgettitle">
+					<?php echo _x( 'Please Help', 'Generic Donation Header', 'love_from_louie' ); ?>
+				</h2>
 
-			endif; ?>
+			<?php endif; ?>
 
             <p>
 				<?php echo do_shortcode( '[give_form id="' . $instance['give_form'] . '" show_content="false" show_title="false"]' ); ?>
