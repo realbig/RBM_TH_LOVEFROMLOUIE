@@ -131,7 +131,7 @@ $query = new WP_Query( array(
 	
 		<div class="small-12 medium-8 medium-push-2 text-center">
 
-			<a href="<?php echo get_post_type_archive_link( 'lfl-story' ); ?>" class="primary hollow button expanded">
+			<a href="<?php echo get_term_link( 'story', 'category' ); ?>" class="primary hollow button expanded">
 				<?php _e( 'See All Stories', 'Stories Archive Link Text', 'love-from-louie' ); ?>
 			</a>
 
