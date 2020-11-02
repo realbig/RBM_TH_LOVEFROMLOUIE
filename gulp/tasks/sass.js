@@ -14,17 +14,13 @@ isRelease = false;
 
 gulp.task( 'sass:front', function() {
 
-	return gulp.src( config.front.src )
+	return gulp.src( config.front.src, { allowEmpty: true } )
 		.pipe( $.sourcemaps.init() )
 		.pipe( 
 			$.sass( {
 				includePaths: config.front.vendor
 			} )
-			.on( 'error', notify.onError( {
-				title: pkg.name,
-				message: "<%- error.message -%>",
-			} )
-		 ) )
+		)
 		.pipe( concat( config.front.filename ) )
 		.pipe( autoprefixer( config.compatibility ) )
 		.pipe( $.cssnano() )
@@ -32,7 +28,7 @@ gulp.task( 'sass:front', function() {
 		.pipe( gulp.dest( config.front.root ) )
 		.pipe( notify( {
 			title: pkg.name,
-			message: 'SASS Complete',
+			message: "SASS Complete",
 			onLast: true
 		} ) );
 
@@ -40,7 +36,7 @@ gulp.task( 'sass:front', function() {
 
 gulp.task( 'sass:admin', function() {
 
-	return gulp.src( config.admin.src )
+	return gulp.src( config.admin.src, { allowEmpty: true } )
 		.pipe( $.sourcemaps.init() )
 		.pipe( 
 			$.sass( {
@@ -58,12 +54,10 @@ gulp.task( 'sass:admin', function() {
 		.pipe( gulp.dest( config.admin.root ) )
 		.pipe( notify( {
 			title: pkg.name,
-			message: 'Admin SASS Complete',
+			message: "Admin SASS Complete",
 			onLast: true
 		} ) );
 
 } );
 
-gulp.task( 'sass', ['sass:front', 'sass:admin'], function( done ) {
-	done();
-} );
+gulp.task( 'sass', gulp.series( 'sass:front', 'sass:admin' ) );

@@ -16,7 +16,7 @@ isRelease = false;
 
 gulp.task( 'uglify:front', function() {
 
-	return gulp.src( config.front.vendor.concat( config.front.src ) )
+	return gulp.src( config.front.vendor.concat( config.front.src ).filter( function( element ) { return element != ''; } ), { allowEmpty: true } )
 		.pipe( $.plumber( { errorHandler: onError } ) )
 		.pipe( $.sourcemaps.init() )
 		.pipe( $.babel( {
@@ -37,7 +37,7 @@ gulp.task( 'uglify:front', function() {
 
 gulp.task( 'uglify:admin', function() {
 
-	return gulp.src( config.admin.vendor.concat( config.admin.src ) )
+	return gulp.src( config.admin.vendor.concat( config.admin.src ).filter( function( element ) { return element != ''; } ), { allowEmpty: true } )
 		.pipe( $.plumber( { errorHandler: onError } ) )
 		.pipe( $.sourcemaps.init() )
 		.pipe( $.babel( {
@@ -58,7 +58,7 @@ gulp.task( 'uglify:admin', function() {
 
 gulp.task( 'uglify:tinymce', function() {
 
-	return gulp.src( config.tinymce.src )
+	return gulp.src( config.tinymce.src, { allowEmpty: true } )
 		.pipe( foreach( function( stream, file ) {
 			return stream
 				.pipe( $.plumber( { errorHandler: onError } ) )
@@ -75,6 +75,6 @@ gulp.task( 'uglify:tinymce', function() {
 
 } );
 
-gulp.task( 'uglify', ['uglify:front', 'uglify:admin', 'uglify:tinymce'], function( done ) {
+gulp.task( 'uglify', gulp.series( 'uglify:front', 'uglify:admin', 'uglify:tinymce' ), function( done ) {
 	done();
 } );
