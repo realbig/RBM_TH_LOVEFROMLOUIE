@@ -15,8 +15,17 @@ locate_template( '/includes/hooks/lfl-story-hooks.php', true, true );
 global $post;
 
 $query = new WP_Query( array(
-	'post_type' => 'lfl-story',
+	'post_type' => 'post',
 	'posts_per_page' => 3,
+	'tax_query' => array(
+		'relation' => 'AND',
+		array(
+			'taxonomy' => 'category',
+			'terms' => array( 'story' ),
+			'compare' => 'IN',
+			'field' => 'slug',
+		)
+	)
 ) );
 
 ?>
