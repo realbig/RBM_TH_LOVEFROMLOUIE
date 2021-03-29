@@ -293,12 +293,10 @@ require_once __DIR__ . '/admin/admin.php';
 add_filter( 'script_loader_tag', 'lovefromlouie_defer_js', 10, 3 );
 
 function lovefromlouie_defer_js( $tag, $handle, $src ) {
-
+	if ( is_admin() ) return $tag;
 	if ( strpos( $handle, 'jquery' ) === false ) {
-
-		$tag = str_replace( 'src', 'defer="defer" src', $tag );
-
+		$tag = str_replace( 'src', 'defer="defer" src', $tag ); 
 	}
-
+	
     return $tag;
 }
