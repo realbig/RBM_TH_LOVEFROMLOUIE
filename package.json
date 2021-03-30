@@ -1,6 +1,6 @@
 {
 	"name": "Love_From_Louie",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"main": "gulpfile.js",
 	"devDependencies": {
 		"babel-preset-es2015": "^6.9.0",

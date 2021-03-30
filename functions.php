@@ -287,7 +287,7 @@ require_once __DIR__ . '/admin/admin.php';
 
 /**
  * Defers parsing of JS
- * @since 1.0.7
+ * @since 1.0.8
  */
 
 add_filter( 'script_loader_tag', 'lovefromlouie_defer_js', 10, 3 );
