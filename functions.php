@@ -54,7 +54,7 @@ add_action( 'init', function () {
 	// Theme styles
 	wp_register_style(
 		'love-from-louie',
-		THEME_URL . '/style.css',
+		THEME_URL . '/dist/assets/css/app.css',
 		null,
 		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VER
 	);
@@ -62,7 +62,7 @@ add_action( 'init', function () {
 	// Theme script
 	wp_register_script(
 		'love-from-louie',
-		THEME_URL . '/assets/js/script.js',
+		THEME_URL . '/dist/assets/js/app.js',
 		array( 'jquery' ),
 		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VER,
 		true

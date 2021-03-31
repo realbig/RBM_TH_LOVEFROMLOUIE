@@ -1,3 +1,5 @@
+import Chart from 'chart.js';
+
 ( function( $ ) {
 
 	$( document ).ready( function() {
