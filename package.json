@@ -12,7 +12,7 @@
 		"classnames": "^2.2.6",
 		"compare-versions": "^3.5.1",
 		"grunt-contrib-compress": "^1.6.0",
-		"gulp": "gulpjs/gulp#v4.0.0",
+		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^3.1.0",
 		"gulp-babel": "^6.1.2",
 		"gulp-clean-css": "^3.3.1",
