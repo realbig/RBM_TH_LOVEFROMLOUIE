@@ -30,7 +30,7 @@ function add_lfl_button_tinymce_filters() {
         
         // Attach script to the button rather than enqueueing it
         add_filter( 'mce_external_plugins', function( $plugin_array ) {
-            $plugin_array['lfl_button_shortcode_script'] = get_stylesheet_directory_uri() . '/assets/js/tinymce/button-shortcode.js';
+            $plugin_array['lfl_button_shortcode_script'] = get_stylesheet_directory_uri() . '/dist/assets/js/tinymce/button-shortcode.js';
             return $plugin_array;
         } );
         
