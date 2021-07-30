@@ -284,18 +284,3 @@ add_action( 'wp_head', function() {
 locate_template( '/includes/hooks/product-hooks.php', true, true );
 
 require_once __DIR__ . '/admin/admin.php';
-
-/**
- * Defers parsing of JS
- * @since 1.0.8
- */
-
-add_filter( 'script_loader_tag', 'lovefromlouie_defer_js', 10, 3 );
-
-function lovefromlouie_defer_js( $tag, $handle, $src ) {
-	if ( is_admin() ) return $tag;
-    if ( $handle == 'jquery' ) return $tag;
-        
-    $tag = str_replace( 'src', 'defer="defer" src', $tag );
-    return $tag;
-}
