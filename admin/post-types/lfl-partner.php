@@ -34,12 +34,12 @@ class RBM_CPT_LFL_Partner extends RBM_CPT {
     function __construct() {
 
         // This allows us to Localize the Labels
-        $this->label_singular = _x( 'Partner', 'Partners Label Singular', THEME_ID );
-        $this->label_plural = _x( 'Partners', 'Partners Label Plural', THEME_ID );
+        $this->label_singular = _x( 'Partner', 'Partners Label Singular', 'love-from-louie' );
+        $this->label_plural = _x( 'Partners', 'Partners Label Plural', 'love-from-louie' );
 
         $this->labels = array(
-            'menu_name' => _x( 'Partners', 'Partners Menu Name', THEME_ID ),
-            'all_items' => _x( 'All Partners', 'Partners All Items', THEME_ID ),
+            'menu_name' => _x( 'Partners', 'Partners Menu Name', 'love-from-louie' ),
+            'all_items' => _x( 'All Partners', 'Partners All Items', 'love-from-louie' ),
         );
 
         parent::__construct();

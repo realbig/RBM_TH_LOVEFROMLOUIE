@@ -34,12 +34,12 @@ class RBM_CPT_LFL_Story extends RBM_CPT {
     function __construct() {
 
         // This allows us to Localize the Labels
-        $this->label_singular = _x( 'Story', 'Stories Label Singular', THEME_ID );
-        $this->label_plural = _x( 'Stories', 'Stories Label Plural', THEME_ID );
+        $this->label_singular = _x( 'Story', 'Stories Label Singular', 'love-from-louie' );
+        $this->label_plural = _x( 'Stories', 'Stories Label Plural', 'love-from-louie' );
 
         $this->labels = array(
-            'menu_name' => _x( 'Stories', 'Stories Menu Name', THEME_ID ),
-            'all_items' => _x( 'All Stories', 'Stories All Items', THEME_ID ),
+            'menu_name' => _x( 'Stories', 'Stories Menu Name', 'love-from-louie' ),
+            'all_items' => _x( 'All Stories', 'Stories All Items', 'love-from-louie' ),
         );
 
         parent::__construct();
