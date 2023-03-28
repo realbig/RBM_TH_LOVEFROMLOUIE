@@ -1,6 +1,6 @@
 {
 	"name": "Love_From_Louie",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"main": "gulpfile.js",
 	"devDependencies": {
 		"babel-core": "^6.26.3",
